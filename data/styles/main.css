@@ -1,0 +1,62 @@
+* {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.HEADER {
+  background: #D6D5D3;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  background-image: url(../assets/images/autres/headerBGImage.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.HEADER .links {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  margin: 0;
+}
+.HEADER .links .link {
+  color: black;
+  font-size: 2vmin;
+  text-decoration: none;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 3.5vh;
+  padding-bottom: 3.5vh;
+}
+.HEADER .links #bHome {
+  margin-right: auto;
+}
+.HEADER .subMenu {
+  background: white;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20vmax;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  border-left: solid black 1px;
+}
+.HEADER .subMenu .subItem {
+  padding: 10px;
+  margin: 10px;
+  background: #D6D5D3;
+}/*# sourceMappingURL=main.css.map */
