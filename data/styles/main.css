@@ -14,6 +14,15 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+a :visited {
+  text-decoration: none;
+  color: black;
+}
+
 .HEADER {
   background: #D6D5D3;
   margin: 10px;
@@ -43,6 +52,15 @@ body {
 .HEADER .links #bHome {
   margin-right: auto;
 }
+.HEADER .links button {
+  border: none;
+  background: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  font-size: 2vmin;
+}
 .HEADER .subMenu {
   background: white;
   position: fixed;
@@ -56,6 +74,7 @@ body {
   border-left: solid black 1px;
 }
 .HEADER .subMenu .subItem {
+  font-size: 2vmin;
   padding: 10px;
   margin: 10px;
   background: #D6D5D3;

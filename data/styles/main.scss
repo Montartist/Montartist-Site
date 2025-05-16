@@ -13,6 +13,15 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    :visited {
+        text-decoration: none;
+        color: black;
+    }
+}
+
 .HEADER {
     background: #D6D5D3;
     margin: 10px;
@@ -40,6 +49,14 @@ body {
         #bHome {
             margin-right: auto;
         }
+        button {
+        border: none;
+        background: none;
+        height: fit-content;
+        padding: 0;
+        margin: 0;
+        font-size: 2vmin;
+        }
     }
 
     .subMenu {
@@ -55,6 +72,7 @@ body {
         border-left: solid black 1px;
 
         .subItem {
+            font-size: 2vmin;
             padding: 10px;
             margin: 10px;
             background: #D6D5D3;
