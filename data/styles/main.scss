@@ -1,25 +1,23 @@
-* {
-    font-family: Arial;
-    margin: 0;
-    padding: 0;
-}
-
 html {
     margin: 0;
     padding: 0;
 }
 body {
+    height: 100%;
     padding: 0;
     margin: 0;
+    font-family: Arial;
 }
-
 a {
     text-decoration: none;
     color: black;
-    :visited {
+    &:visited {
         text-decoration: none;
         color: black;
     }
+}
+ul {
+    list-style-type: disc;
 }
 
 .HEADER {
@@ -36,9 +34,10 @@ a {
         list-style-type: none;
         justify-content: flex-end;
         margin: 0;
+        padding: 0;
         .link {
             color: black;
-            font-size: 2vmin;
+            font-size: 1.5vmax;
             text-decoration: none;
             text-align: center;
             padding-right: 20px;
@@ -47,15 +46,18 @@ a {
             padding-bottom: 3.5vh;
         }
         #bHome {
+            margin-left: 0;
             margin-right: auto;
+            padding-left: 0;
         }
+
         button {
         border: none;
         background: none;
         height: fit-content;
         padding: 0;
         margin: 0;
-        font-size: 2vmin;
+        font-size: 1.5vmax;
         }
     }
 
@@ -72,10 +74,48 @@ a {
         border-left: solid black 1px;
 
         .subItem {
-            font-size: 2vmin;
-            padding: 10px;
+            font-size: 1.5vmax;
+            padding: 15px;
             margin: 10px;
+            margin-top: 5vmin;
             background: #D6D5D3;
+        }
+    }
+}
+
+main {
+    margin: auto;
+    margin-top: 5vh;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vh;
+    section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid black;
+        width: 85vw;
+        border-radius: 7px;
+    }
+    .pres-list {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        &>li {
+            padding: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
         }
     }
 }
