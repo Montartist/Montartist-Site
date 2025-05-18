@@ -1,0 +1,154 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vh;
+}
+a {
+    text-decoration: none;
+    color: black;
+    &:visited {
+        text-decoration: none;
+        color: black;
+    }
+}
+ul {
+    list-style-type: disc;
+}
+
+.HEADER {
+    background: #D6D5D3;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-image: url(../assets/images/utils/headerBG.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .links {
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+        .link {
+            color: black;
+            font-size: 1.5vmax;
+            text-decoration: none;
+            text-align: center;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-top: 3.5vh;
+            padding-bottom: 3.5vh;
+            cursor: pointer;
+        }
+        #bHome {
+            margin-left: 0;
+            margin-right: auto;
+            padding-left: 0;
+        }
+    }
+
+    .subMenu {
+        background: white;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 20vmax;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        border-left: solid black 1px;
+        cursor: default;
+
+        .subItem {
+            font-size: 1.5vmax;
+            padding: 15px;
+            margin: 10px;
+            margin-top: 5vmin;
+            background: #D6D5D3;
+        }
+    }
+}
+
+.hPage {                
+    margin: auto;
+    margin-top: 5vh;
+    width: 85vw;
+    section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid black;
+        width: 85vw;
+        border-radius: 7px;
+    }
+    .pres-list {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        &>li {
+            padding: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+    }
+}
+
+.carrouselPart {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: 75vw;
+    border: 1px solid black;
+    .carrouselPartButton {
+        border: none;
+        background: none;
+        width: 2.5vw;
+        margin: 0;
+        padding: 0;
+    }
+    .carrouselPartImg {
+        display: block;
+        max-height: 75vh;
+        max-width: 70vw;
+    }
+    .carrouselPartCollection {
+        display: flex;
+        justify-content: center;
+        width: 75vw;
+        height: 5vh;
+        margin-top: 1vh;
+        .collectionPartImg {
+            margin-left: 0.5vw;
+            margin-right: 0.5vw;
+            display: block;
+            max-height: 5vh;
+        }
+        .displayedImg {
+            border: 2px solid red;
+        }
+    }
+}
