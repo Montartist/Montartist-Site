@@ -18,25 +18,54 @@ menuPortfolio.addEventListener("focus", function () {menuPortfolio.innerHTML = '
 body.addEventListener("click", function (e) {menuEventHandler(e,menuConcours,'CONCOURS');})
 body.addEventListener('click', function (e) {menuEventHandler(e,menuPortfolio,'PORTFOLIO');})
 
+//Importing Datas
+
+function requestJSON(url) {
+    const request = new XMLHttpRequest();
+    request.open("GET", url, false); // `false` makes the request synchronous
+    request.send(null);
+
+    if (request.status === 200) {
+        console.log(request.responseText);
+        return JSON.parse(request.responseText);
+    }
+    return null;
+}
+
+
+
+if (document.URL == 'http://localhost/Concours/Participants' || document.URL == 'http://localhost/Concours/Selectionnes') {
+    var partDatas = requestJSON("http://localhost/files/data/concours.json")
+    console.log(partDatas)
+    var imgPartList = []
+    for (oeuvre of partDatas['Numérique']) {
+        oeuvre.file = `http://localhost/files/assets/images/oeuvres/concours/numerique/${oeuvre.file}`
+        imgPartList.push(oeuvre.file)
+    }
+    for (oeuvre of partDatas['Traditionnel']) {
+        oeuvre.file = `http://localhost/files/assets/images/oeuvres/concours/traditionnel/${oeuvre.file}`
+        imgPartList.push(oeuvre.file)
+    }
+}
+
 //Carrousel
 var carrouselPart = document.querySelector('.carrouselPart')
 var carrouselPartButtonsLeft = document.querySelector('.carrouselPartL')
 var carrouselPartButtonsRight = document.querySelector('.carrouselPartR')
-var imgPartList = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg']
 var imgId = 0
 var carrouselPartCollection = document.querySelector('.carrouselPartCollection')
 
 function setImg(imgId, imgList, carrousel) {
     var carrouselImg = carrousel.children[1]
     var imgAct = imgList[imgId]
-    carrouselImg.setAttribute('src', `http://localhost/files/assets/images/test/${imgAct}`)
+    carrouselImg.setAttribute('src', imgAct)
     for (img of carrousel.lastChild.children) {
         img.removeAttribute('class')
         img.setAttribute('class', 'collectionPartImg')
     }
     carrousel.lastChild.children[imgId].setAttribute('class', 'collectionPartImg displayedImg')
 }
-for (i of imgPartList) {
+for (var i of imgPartList) {
     var img = document.createElement('img')
     carrouselPartCollection.appendChild(img)
 }
@@ -45,7 +74,7 @@ setImg(imgId,imgPartList, carrouselPart)
 
 var collectionPartImgs = []
 for (i = 0; i < carrouselPartCollection.children.length; i++) {
-    carrouselPartCollection.children[i].setAttribute('src', `http://localhost/files/assets/images/test/${i+1}.jpg`)
+    carrouselPartCollection.children[i].setAttribute('src', imgPartList[i])
 }
 
 carrouselPartButtonsRight.addEventListener('click', function () {

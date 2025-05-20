@@ -120,6 +120,7 @@ ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    min-height: 81vh;
     height: fit-content;
     width: 75vw;
     border: 1px solid black;
@@ -137,18 +138,24 @@ ul {
     }
     .carrouselPartCollection {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         width: 75vw;
-        height: 5vh;
-        margin-top: 1vh;
+        min-height: 5vh;
+        height: fit-content;
+        margin-top: auto;
         .collectionPartImg {
             margin-left: 0.5vw;
             margin-right: 0.5vw;
             display: block;
-            max-height: 5vh;
+            max-height: 3vh;
+            max-width: 3vw;
+            margin-top: 10px;
         }
         .displayedImg {
             border: 2px solid red;
+            max-height: 5vh;
+            max-width: 5vw;
         }
     }
 }
