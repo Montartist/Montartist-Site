@@ -24,13 +24,14 @@ body.addEventListener('click', function (e) {menuEventHandler(e,menuPortfolio,'P
 
 //Carrousel for participants page
 if (document.URL == 'http://localhost/Concours/Participants') {
-    carrousel.carrousel(document.querySelector('.carrouselPart'), await dataLoad.createImageList('http://localhost/files/data/concours.json'))
+    carrousel.carrousel(document.querySelector('.carrouselPart'), await dataLoad.createImageList('http://localhost/files/data/concours.json', 'Tous'))
 }
 
 var filter = document.querySelector('#filterInput')
 
 async function refreshCarrousel(filter) {
-    carrousel.carrousel(document.querySelector('.carrouselPart'), await dataLoad.createImageList('http://localhost/files/data/concours.json', filter.value))
+    var carrouselPart = document.querySelector('.carrouselPart')
+    carrousel.carrousel(carrouselPart, await dataLoad.createImageList('http://localhost/files/data/concours.json', filter.value))
 }
 filter.addEventListener('change', function () {
     console.log(filter.value)

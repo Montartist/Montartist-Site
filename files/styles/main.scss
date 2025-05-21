@@ -159,3 +159,17 @@ ul {
         }
     }
 }
+
+.partSelector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    :first-child {
+        font-size: 2vh;
+        margin-right: 10px;
+        padding-top: 1.5vh;
+    }
+    :nth-child(n) {
+        height: 4vh;
+    }
+}
