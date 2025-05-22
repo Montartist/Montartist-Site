@@ -116,7 +116,7 @@ ul {
     }
 }
 
-.carrouselPart {
+.carrousel {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -124,19 +124,19 @@ ul {
     height: fit-content;
     width: 75vw;
     border: 1px solid black;
-    .carrouselPartButton {
+    .carrouselButton {
         border: none;
         background: none;
         width: 2.5vw;
         margin: 0;
         padding: 0;
     }
-    .carrouselPartImg {
+    .carrouselImg {
         display: block;
         max-height: 75vh;
         max-width: 70vw;
     }
-    .carrouselPartCollection {
+    .carrouselCollection {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -144,7 +144,7 @@ ul {
         min-height: 5vh;
         height: fit-content;
         margin-top: auto;
-        .collectionPartImg {
+        .collectionImg {
             margin-left: 0.5vw;
             margin-right: 0.5vw;
             display: block;
@@ -160,7 +160,7 @@ ul {
     }
 }
 
-.partSelector {
+.Selector {
     display: flex;
     align-items: center;
     justify-content: center;
