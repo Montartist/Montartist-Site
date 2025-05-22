@@ -5,8 +5,8 @@ async function carrousel(carrouselObj, imgList) {
 	carrouselObj.innerHTML = carrouselHTML
 
 	var imgId = 0
-	var carrouselButtonsLeft = carrouselObj.firstChild
-	var carrouselButtonsRight = carrouselObj.children[2]
+	var carrouselButtonsLeft = carrouselObj.children[1]
+	var carrouselButtonsRight = carrouselObj.children[3]
 	var carrouselCollection = carrouselObj.lastChild
 	
 	carrouselCollection.innerHTML = ''
@@ -17,6 +17,19 @@ async function carrousel(carrouselObj, imgList) {
 
 	setImg(imgId, imgList, carrouselObj)
 
+	function bigPicture(img,existingClass) {
+		img.setAttribute('class', ' bigPicture')
+		img.removeEventListener('click', bigPicture)
+		img.addEventListener('click', function () {noBigPicture(img, existingClass); })
+	}
+	function noBigPicture(img, existingClass) {
+		img.setAttribute('class', existingClass)
+		img.removeEventListener('click', noBigPicture)
+		img.addEventListener('click', function () {bigPicture(img, existingClass); })
+	}
+
+	var carImg = carrouselObj.children[2]
+	carImg.addEventListener('click', function () {bigPicture(carImg, carImg.className); })	
 	
 	for (var i = 0; i < carrouselCollection.children.length; i++) {
 		carrouselCollection.children[i].setAttribute('src', imgList[i].file)
@@ -51,8 +64,10 @@ async function carrousel(carrouselObj, imgList) {
 }
 
 function setImg(imgId, imgList, carrousel) {
-	var carrouselImg = carrousel.children[1]
+	var carInfo = carrousel.children[0]
+	var carrouselImg = carrousel.children[2]
 	var imgAct = imgList[imgId]
+	carInfo.innerHTML = `<li>Nom : ${imgAct.name}</li><li>Artiste : ${imgAct.artiste}</li><li>Sélectionnée : ${{false : "non", true : "oui"}[imgAct['sélectionné']]}</li>`
 	carrouselImg.setAttribute('src', imgAct.file)
 	for (var img of carrousel.lastChild.children) {
 		img.removeAttribute('class')

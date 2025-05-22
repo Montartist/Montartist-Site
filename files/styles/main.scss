@@ -1,12 +1,6 @@
-html {
-    margin: 0;
-    padding: 0;
-}
 body {
-    height: 100%;
-    padding: 0;
-    margin: 0;
     font-family: Arial;
+    margin: 0;
 }
 main {
     width: 100vw;
@@ -14,6 +8,7 @@ main {
     flex-direction: column;
     align-items: center;
     font-size: 2vh;
+    width: 99vw;
 }
 a {
     text-decoration: none;
@@ -120,37 +115,67 @@ ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    min-height: 81vh;
-    height: fit-content;
-    width: 75vw;
+    height: 80vh;
+    width: 80vw;
     border: 1px solid black;
+    margin-bottom: 1vh;
+    border-radius: 7px;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    .carInfo {
+        font-size: 1.5vmin;
+        width: 80vw;
+        height: 2vh;
+        margin: 0;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        padding: 0;
+    }
     .carrouselButton {
         border: none;
         background: none;
-        width: 2.5vw;
+        width: 5vw;
+        height: 68vh;
         margin: 0;
         padding: 0;
+        :nth-child(n) {
+            width: 2.5vw;
+        }
     }
     .carrouselImg {
         display: block;
-        max-height: 75vh;
+        max-height: 68vh;
         max-width: 70vw;
+        object-fit: contain;
+    }
+    .bigPicture {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: auto;
+        height: 100vh;
+        width: 100vw;
+        object-fit: contain;
+        background-color: rgba($color: #000000, $alpha: 0.7);
     }
     .carrouselCollection {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 75vw;
-        min-height: 5vh;
+        width: 80vw;
+        height: 6vh;
         height: fit-content;
-        margin-top: auto;
+        padding: 0.5vmin;
+        align-self: flex-end;
         .collectionImg {
             margin-left: 0.5vw;
             margin-right: 0.5vw;
             display: block;
-            max-height: 3vh;
-            max-width: 3vw;
+            height: 3vh;
+            width: 3vw;
             margin-top: 10px;
+            object-fit: scale-down;
         }
         .displayedImg {
             border: 2px solid red;

@@ -3,49 +3,49 @@
         {
             "name": "La porte",
             "artiste": "Fodoyiïo",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "la_porte.jpg"
         },
         {
             "name": "Princesse de la forêt",
             "artiste": "Fodoyiïo",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "princesse_de_la_foret.jpg"
         },
         {
             "name": "Prairie d'été",
             "artiste": "Frangipane",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "prairie_d_ete.jpg"
         },
         {
             "name": "Fille dans la lumière",
             "artiste": "Lathe",
-            "selectionné" : true,
+            "sélectionné" : true,
             "file": "fille_dans_la_lumiere.jpg"
         },
         {
             "name": "Ken Kaneki",
             "artiste": "Nova",
-            "selectionné" : true,
+            "sélectionné" : true,
             "file": "ken_kaneki.jpeg"
         },
         {
             "name": "Snowxborn",
             "artiste": "Nova",
-            "selectionné" : true,
+            "sélectionné" : true,
             "file": "snowxborn.jpeg"
         },
         {
             "name": "Jimmy Buckets",
             "artiste": "TD",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "jimmy_buckets.jpg"
         },
         {
             "name": "The Bear",
             "artiste": "TD",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "the_bear.jpg"
         }
     ],
@@ -53,109 +53,109 @@
         {
             "name": "El predestinato",
             "artiste": "Droff",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "elpredestino.jpg"
         },
         {
             "name": "Ma Go",
             "artiste": "Droff",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "ma_go.jpg"
         },
         {
             "name": "Miroir d'eau",
             "artiste": "Fodoyiïo ",
-            "selectionné" : true,
+            "sélectionné" : true,
             "file": "miroir_d_eau.jpeg"
         },
         {
             "name": "Méduse errant dans la mer des pensées",
             "artiste": "IC",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "meduse_errant_dans_la_mer_des_pensees.jpeg"
         },
         {
             "name": "Piazza di Ferrari, esquisse",
             "artiste": "Isaac Studios",
-            "selectionné" : true,
+            "sélectionné" : true,
             "file": "piazza_di_ferrari.jpg"
         },
         {
             "name": "SunKenRock",
             "artiste": "Isaac Studios",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "sun_ken_rock.jpg"
         },
         {
             "name": "La flamme",
             "artiste": "Jeanne P",
-            "selectionné" : true,
+            "sélectionné" : true,
             "file": "la_flamme.jpg"
         },
         {
             "name": "Abbaye de la Sauve Majeure",
             "artiste": "Linear-t",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "abbaye_de_la_sauve_majeure.jpg"
         },
         {
             "name": "Le Passage",
             "artiste": "Linear-t",
-            "selectionné" : true,
+            "sélectionné" : true,
             "file": "le_passage.jpg"
         },
         {
             "name": "Le Destin",
             "artiste": "Liz Denvers",
-            "selectionné" : true,
+            "sélectionné" : true,
             "file": "le_destin.jpg"
         },
         {
             "name": "Le prince de Busan",
             "artiste": "Liz Denvers",
-            "selectionné" : true,
+            "sélectionné" : true,
             "file": "le_prince_de_busan.jpg"
         },
         {
             "name": "Ame no hashi ",
             "artiste": "LM",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "ame_no_hashi.jpeg"
         },
         {
             "name": "Le Tigre",
             "artiste": "LM",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "le_tigre.jpeg"
         },
         {
             "name": "Ivysm",
             "artiste": "Mashu Pichou",
-            "selectionné" : true,
+            "sélectionné" : true,
             "file": "ivysm.jpg"
         },
         {
             "name": "Golden",
             "artiste": "Nova",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "golden.jpeg"
         },
         {
             "name": "L aime le sucre",
             "artiste": "Nova",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "l_aime_le_sucre.jpeg"
         },
         {
             "name": "Le pont",
             "artiste": "SC",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "le_pont.jpg"
         },
         {
             "name": "Paysage automnal",
             "artiste": "SC",
-            "selectionné" : false,
+            "sélectionné" : false,
             "file": "paysage_automnal.jpg"
         }
     ]

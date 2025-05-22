@@ -8,6 +8,8 @@ menubar.createMenuBar(menuBar)
 
 
 //Carrousel for participants page
+var filter = document.querySelector('#filterInput')
+
 if (document.URL == 'http://localhost/Concours/Participants') {
     var carrouselPart = document.querySelector('.carrousel')
     carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList('http://localhost/files/data/concours.json', 'Tous'))
@@ -15,13 +17,11 @@ if (document.URL == 'http://localhost/Concours/Participants') {
         console.log(filter.value)
         refreshPartCarrousel(filter)
     })
+    async function refreshPartCarrousel(filter) {
+        carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList('http://localhost/files/data/concours.json', filter.value))
+    }
 }
 
-var filter = document.querySelector('#filterInput')
-
-async function refreshPartCarrousel(filter) {
-    carrousel.carrousel(carrousel, await dataLoad.createPartImageList('http://localhost/files/data/concours.json', filter.value))
-}
 
 //Carrousel for selected page
 if (document.URL == 'http://localhost/Concours/Selectionnes') {
