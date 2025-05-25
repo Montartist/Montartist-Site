@@ -1,6 +1,7 @@
 import * as dataLoad from 'http://localhost/files/scripts/dataLoad.js'
 import * as carrousel from 'http://localhost/files/scripts/carrousel.js'
 import * as menubar from 'http://localhost/files/scripts/menubar.js'
+import * as portfolioBuilder from 'http://localhost/files/scripts/portfolioBuilder.js'
 
 //Menubar
 var menuBar = document.querySelector('.HEADER')
@@ -12,13 +13,13 @@ var filter = document.querySelector('#filterInput')
 
 if (document.URL == 'http://localhost/Concours/Participants') {
     var carrouselPart = document.querySelector('.carrousel')
-    carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList('http://localhost/files/data/concours.json', 'Tous'))
+    carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList('http://localhost/files/data/concours.json', 'Tous'), 'concours')
     filter.addEventListener('change', function () {
         console.log(filter.value)
         refreshPartCarrousel(filter)
     })
     async function refreshPartCarrousel(filter) {
-        carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList('http://localhost/files/data/concours.json', filter.value))
+        carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList('http://localhost/files/data/concours.json', filter.value), 'concours')
     }
 }
 
@@ -26,12 +27,24 @@ if (document.URL == 'http://localhost/Concours/Participants') {
 //Carrousel for selected page
 if (document.URL == 'http://localhost/Concours/Selectionnes') {
     var carrouselSel = document.querySelector('.carrousel')
-    carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList('http://localhost/files/data/concours.json', 'Tous'))
+    carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList('http://localhost/files/data/concours.json', 'Tous'), ' concours')
     filter.addEventListener('change', function () {
         console.log(filter.value)
         refreshSelCarrousel(filter)
     })
 }
 async function refreshSelCarrousel(filter) {
-    carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList('http://localhost/files/data/concours.json', filter.value))
+    carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList('http://localhost/files/data/concours.json', filter.value), 'concours')
+}
+
+//The portfolio
+if (/Portfolio/.test(document.URL)) {
+    var portfolioContainer = document.querySelector('.portfolioContainer')
+    if (document.URL[document.URL.length-1] == '/') {
+        var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10, document.URL.length-1)
+        console.log(artist)
+    } else {
+        var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10)
+    }
+    portfolioBuilder.build(portfolioContainer,artist)
 }

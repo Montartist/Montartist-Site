@@ -1,5 +1,5 @@
 
-async function carrousel(carrouselObj, imgList) {
+async function carrousel(carrouselObj, imgList, useCase) {
 	var carrouselHTML = carrouselObj.innerHTML
 	carrouselObj.innerHTML = ''
 	carrouselObj.innerHTML = carrouselHTML
@@ -15,7 +15,7 @@ async function carrousel(carrouselObj, imgList) {
 		carrouselCollection.appendChild(img)
 	}
 
-	setImg(imgId, imgList, carrouselObj)
+	setImg(imgId, imgList, carrouselObj,useCase)
 
 	function bigPicture(img,existingClass) {
 		img.setAttribute('class', ' bigPicture')
@@ -38,7 +38,7 @@ async function carrousel(carrouselObj, imgList) {
 			while (carrouselCollection.children[imgId] != this) {
 				imgId ++
 			}
-			setImg(imgId, imgList, carrouselObj)
+			setImg(imgId, imgList, carrouselObj,useCase)
 		})
 	}
 
@@ -49,7 +49,7 @@ async function carrousel(carrouselObj, imgList) {
 		else {
 			imgId += 1
 		}
-		setImg(imgId, imgList, carrouselObj)
+		setImg(imgId, imgList, carrouselObj,useCase)
 
 	})
 	carrouselButtonsLeft.addEventListener('click', function () {
@@ -59,15 +59,26 @@ async function carrousel(carrouselObj, imgList) {
 		else {
 			imgId -=1
 		}
-		setImg(imgId, imgList, carrouselObj)
+		setImg(imgId, imgList, carrouselObj,useCase)
 	})
 }
 
-function setImg(imgId, imgList, carrousel) {
+function setImg(imgId, imgList, carrousel, useCase) {
 	var carInfo = carrousel.children[0]
 	var carrouselImg = carrousel.children[2]
-	var imgAct = imgList[imgId]
-	carInfo.innerHTML = `<li>Nom : ${imgAct.name}</li><li>Artiste : ${imgAct.artiste}</li><li>Sélectionnée : ${{false : "non", true : "oui"}[imgAct['sélectionné']]}</li>`
+	var imgAct = null
+	if (useCase == "concours") {
+		imgAct = imgList[imgId]
+		carInfo.innerHTML = `<li>Nom : ${imgAct.name}</li><li>Artiste : ${imgAct.artiste}</li><li>Sélectionnée : ${{false : "non", true : "oui"}[imgAct['sélectionné']]}</li>`
+	} else if (useCase == 'portfolio') {
+		if (document.URL[document.URL.length-1] == '/') {
+      var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10, document.URL.length-1)
+      console.log(artist)
+    } else {
+      var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10)
+    }
+		carInfo.innerHTML = `<li>Nom ${imgList[artist][imgAct]}</li>`
+	}
 	carrouselImg.setAttribute('src', imgAct.file)
 	for (var img of carrousel.lastChild.children) {
 		img.removeAttribute('class')

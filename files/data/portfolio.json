@@ -1,5 +1,5 @@
-[
-    {
+{
+    "Svelee" :{
         "name" : "Svelee",
         "fName" : "Svelee",
         "intention" : "Je dessine ce que je n'arrive pas à dire avec les mots. Je n'ai pas de style particulier, mais j'essaie de rendre chacun de mes dessins un peu spécial. J'ai toujours aimé dessiner, mais j'ai vraiment commencé à la faire régulièrement en période de dépression. Je dessine très souvent en cours, mais parfois en dehors, parfois plusieurs heures d'affilées, souvent selon le temps que j'ai. Je ne connais pas beaucoup d'artistes, et je n'ai pas spécialement d'artiste favori. Je ne ressens rien de particulier quand je dessine, c'est pour moi une activité comme une autre aussi plaisante soit-elle. il y a tout de même une définition de l'art que j'aime beaucoup et à laquelle j'essaie de me rapprocher, \"perturber les réconfortés et réconforter les perturbés\". Cette définition se reflète beaucoup dans la façon dont la plupart des gens trouvent mes dessins bizarres, tandis que ceux qui ont vécu des troubles mentaux ou d'autres problèmes les apprécient plus",
@@ -8,7 +8,7 @@
         "oeuvres" : [["Ange","ange.JPG"],["Crystal","crystal.png"],["IT'S TIME","it_s_time.JPG"],["Ilovemushrooms","ilovemushrooms.png"],["Mr Universe","mr_universe.png"],["Spacebots","spacebots.png"],["Untitled","untitled.jpg"]],
         "autoportrait" : "autoportrait.png"
     },
-    {
+    "KassiS" : {
         "name" : "KassiS",
         "fName" : "KassiS",
         "intention" : "Je suis passionné d'animation et de jeux de cartes. Pour mes dessins. Je m'inspire principalement de ce que je vois, pour moi une simple bougie peut devenir autre chose comme un paysage, un monstre ou des idées plus conceptuelles. Je suis plutôt obstiné quand j'ai une idée de dessin en tête je peux facilement passer des heures dessus même si mon sommeil en paye le prix.",
@@ -17,7 +17,7 @@
         "oeuvres" : [["Buto-Ijo","buto-ijo.jpg"],["Esclebard","esclebard.jpg"],["Plante","plante.jpg"],["Ripper Knight","ripper_knight.jpg"],["Wendigo","wendigo.jpg"]],
         "autoportrait" : "autoportrait.jpg"
     },
-    {
+    "Fodoyiïo" : {
         "name" : "Fodoyiïo",
         "fName" : "Fodoyiio",
         "intention" : "Le dessin ça commence vraiment par des gribouillis informes fait dans un cahier qui ne fut pas acheté pour ça. Après ça évolue. On se dit qu'on aime ça et on continue. Puis on se crée ses personnages, son univers et après beaucoup plus de gribouillis, on sait que c'est plus qu'un simple passe temps. Ce que j'aime dessiné c'est le fantastique, l'irréel. Puisque après tout, pourquoi se limiter à ce qui existe déjà quand je peux créer ce que je veux? Aujourd'hui je dessine avec de l'or. La couleur dorée. C'est joli. Sur des couleurs qui rappellent la nuit pendant laquelle je crée. Parce que la nuit ça fait fuser l'inspiration. Par petits intervalles où je rajoute un coup de pinceau qui ne sera vu par personne d'autre que moi, se fondant dans la masse de détails. J’aime les détails, ça attire mon regard. Alors, je dessine.",
@@ -26,4 +26,4 @@
         "oeuvres" : [["La Porte","la_porte.jpg"],["Dualité","dualite.png"],["Divins","divins.png"],["Princesse de la Forêt","princessee_de_la_foret.jpg"],["Cauchemar rouge","cauchemar_rouge.png"],["Discorde","discorde.png"],["miroir d'eau","miroir_d_eau.jpg"]],
         "autoportrait" : "autoportrait.jpeg"
     }
-]
+}

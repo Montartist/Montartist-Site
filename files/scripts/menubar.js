@@ -16,14 +16,14 @@ async function createMenuBar(menuBarObj) {
 	menuConcours.addEventListener("focus", function () {menuConcours.innerHTML = 'CONCOURS <div id="subConcours" class="subMenu"><ul class="subMenu"><li class="subItem"><a href="http://localhost/Concours/Participants">Participants</a></li><li class="subItem"><a href="http://localhost/Concours/Selectionnes">Sélectionnés</a></li></ul></div>'; })
 	menuPortfolio.addEventListener("focus", function () {
 		menuPortfolio.innerHTML = 'PORTFOLIO <div id="subPortfolio" class="subMenu"><ul class="subMenu"></ul></div>'
-		for (var participant of portfolioParticipants) {
+		for (var participant of Object.keys(portfolioParticipants)) {
 			var li = document.createElement('li')
 			li.setAttribute('class', 'subItem')
 			document.querySelectorAll('.subMenu')[1].appendChild(li)
 			var a = document.createElement('a')
-			a.setAttribute('href', `http://localhost/Portfolio/${participant.fName}`)
+			a.setAttribute('href', `http://localhost/Portfolio/${portfolioParticipants[participant].fName}`)
 			li.appendChild(a)
-			a.innerHTML = participant.name
+			a.innerHTML = portfolioParticipants[participant].name
 		}
 	})
 

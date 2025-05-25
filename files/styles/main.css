@@ -121,7 +121,6 @@ ul {
   border: 1px solid black;
   margin-bottom: 1vh;
   border-radius: 7px;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 .carrousel .carInfo {
   font-size: 1.5vmin;
@@ -175,8 +174,6 @@ ul {
   align-self: flex-end;
 }
 .carrousel .carrouselCollection .collectionImg {
-  margin-left: 0.5vw;
-  margin-right: 0.5vw;
   display: block;
   height: 3vh;
   width: 3vw;
@@ -202,4 +199,18 @@ ul {
 }
 .Selector :nth-child(n) {
   height: 4vh;
+}
+
+.portfolioContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 80vh;
+  width: 80vw;
+}
+.portfolioContainer .portfolioAutoportrait {
+  max-width: 40vw;
+  max-height: 40vh;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=main.css.map */
