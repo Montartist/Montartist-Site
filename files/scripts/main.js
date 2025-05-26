@@ -15,7 +15,6 @@ if (document.URL == 'http://localhost/Concours/Participants') {
     var carrouselPart = document.querySelector('.carrousel')
     carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList('http://localhost/files/data/concours.json', 'Tous'), 'concours')
     filter.addEventListener('change', function () {
-        console.log(filter.value)
         refreshPartCarrousel(filter)
     })
     async function refreshPartCarrousel(filter) {
@@ -27,14 +26,13 @@ if (document.URL == 'http://localhost/Concours/Participants') {
 //Carrousel for selected page
 if (document.URL == 'http://localhost/Concours/Selectionnes') {
     var carrouselSel = document.querySelector('.carrousel')
-    carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList('http://localhost/files/data/concours.json', 'Tous'), ' concours')
+    carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList('http://localhost/files/data/concours.json', 'Tous'), 'concours')
     filter.addEventListener('change', function () {
-        console.log(filter.value)
         refreshSelCarrousel(filter)
     })
-}
-async function refreshSelCarrousel(filter) {
-    carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList('http://localhost/files/data/concours.json', filter.value), 'concours')
+    async function refreshSelCarrousel(filter) {
+        carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList('http://localhost/files/data/concours.json', filter.value), 'concours')
+    }
 }
 
 //The portfolio
@@ -42,7 +40,6 @@ if (/Portfolio/.test(document.URL)) {
     var portfolioContainer = document.querySelector('.portfolioContainer')
     if (document.URL[document.URL.length-1] == '/') {
         var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10, document.URL.length-1)
-        console.log(artist)
     } else {
         var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10)
     }

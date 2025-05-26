@@ -1,6 +1,7 @@
 body {
   font-family: Arial;
   margin: 0;
+  background: #4D5C63;
 }
 
 main {
@@ -10,15 +11,7 @@ main {
   align-items: center;
   font-size: 2vh;
   width: 99vw;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-a:visited {
-  text-decoration: none;
-  color: black;
+  background: #4D5C63;
 }
 
 ul {
@@ -34,6 +27,14 @@ ul {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+.HEADER a {
+  text-decoration: none;
+  color: black;
+}
+.HEADER a:visited {
+  text-decoration: none;
+  color: black;
 }
 .HEADER .links {
   display: flex;
@@ -80,9 +81,10 @@ ul {
 }
 
 .hPage {
-  margin: auto;
-  margin-top: 5vh;
-  width: 85vw;
+  background: url(../assets/images/utils/headerBG.jpg) fixed no-repeat;
+}
+.hPage .hSection {
+  background: none;
 }
 .hPage section {
   display: flex;
@@ -91,9 +93,7 @@ ul {
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 10px;
-  border: 1px solid black;
   width: 85vw;
-  border-radius: 7px;
 }
 .hPage .pres-list {
   padding: 0;
@@ -113,14 +113,15 @@ ul {
 }
 
 .carrousel {
+  background: #859A9D;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   height: 80vh;
   width: 80vw;
-  border: 1px solid black;
   margin-bottom: 1vh;
   border-radius: 7px;
+  border: 1px solid black;
 }
 .carrousel .carInfo {
   font-size: 1.5vmin;
@@ -131,14 +132,18 @@ ul {
   list-style-type: none;
   justify-content: space-around;
   padding: 0;
+  background: #D6D5D3;
+  border-radius: 7px;
 }
 .carrousel .carrouselButton {
   border: none;
-  background: none;
+  background: #D6D5D3;
+  border-radius: 50%;
   width: 5vw;
-  height: 68vh;
-  margin: 0;
+  height: 5vw;
+  margin: 10px;
   padding: 0;
+  align-self: center;
 }
 .carrousel .carrouselButton :nth-child(n) {
   width: 2.5vw;
@@ -172,25 +177,35 @@ ul {
   height: fit-content;
   padding: 0.5vmin;
   align-self: flex-end;
+  background: #D6D5D3;
+  border-radius: 7px;
 }
 .carrousel .carrouselCollection .collectionImg {
   display: block;
   height: 3vh;
-  width: 3vw;
+  width: 3vh;
+  margin: 0.5vmin;
   margin-top: 10px;
+  margin-bottom: 0;
   -o-object-fit: scale-down;
      object-fit: scale-down;
 }
 .carrousel .carrouselCollection .displayedImg {
   border: 2px solid red;
   max-height: 5vh;
-  max-width: 5vw;
+  max-width: 5vh;
 }
 
 .Selector {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #D6D5D3;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid black;
 }
 .Selector :first-child {
   font-size: 2vh;
@@ -199,18 +214,110 @@ ul {
 }
 .Selector :nth-child(n) {
   height: 4vh;
+  background: #D6D5D3;
 }
 
 .portfolioContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 80vh;
-  width: 80vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 85vw;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+.portfolioContainer .portfolioTitle {
+  height: 5vh;
+  width: 100%;
+  margin: 1vmin;
+  text-align: center;
+}
+.portfolioContainer .portfolioCarrousel {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 40vh;
+  width: 40vw;
+  border: 1px solid black;
+  border-radius: 7px;
+  margin: 1vmin;
+}
+.portfolioContainer .portfolioCarrousel .carInfo {
+  font-size: 1.5vmin;
+  width: 40vw;
+  height: 2vh;
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+}
+.portfolioContainer .portfolioCarrousel .carrouselButton {
+  border: none;
+  background: none;
+  width: 5vw;
+  height: 28vh;
+  margin: 0;
+  padding: 0;
+}
+.portfolioContainer .portfolioCarrousel .carrouselButton :nth-child(n) {
+  width: 2.5vw;
+}
+.portfolioContainer .portfolioCarrousel .carrouselImg {
+  display: block;
+  max-height: 28vh;
+  max-width: 30vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.portfolioContainer .portfolioCarrousel .bigPicture {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: auto;
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.portfolioContainer .portfolioCarrousel .carrouselCollection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 40vw;
+  height: 6vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5vmin;
+  align-self: flex-end;
+}
+.portfolioContainer .portfolioCarrousel .carrouselCollection .collectionImg {
+  display: block;
+  height: 3vh;
+  width: 3vh;
+  margin: 0.5vmin;
+  margin-top: 10px;
+  margin-bottom: 0;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.portfolioContainer .portfolioCarrousel .carrouselCollection .displayedImg {
+  border: 2px solid red;
+  max-height: 5vh;
+  max-width: 5vh;
+}
+.portfolioContainer .portfolioIntent {
+  height: 40vh;
+  width: 40vw;
+  margin: 1vmin;
 }
 .portfolioContainer .portfolioAutoportrait {
   max-width: 40vw;
   max-height: 40vh;
   -o-object-fit: contain;
      object-fit: contain;
+  margin: 1vmin;
 }/*# sourceMappingURL=main.css.map */
