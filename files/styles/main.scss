@@ -223,8 +223,8 @@ ul {
     flex-wrap: wrap;
     width: fit-content;
     max-width: 85vw;
-    border: 1px solid black;
     border-radius: 7px;
+    background-color: $secondary;
     .portfolioTitle {
         height: 5vh;
         width: 100%;
@@ -237,11 +237,13 @@ ul {
         flex-wrap: wrap;
         height: 40vh;
         width: 40vw;
-        border: 1px solid black;
+        border: 1px solid $accent;
         border-radius: 7px;
         margin: 1vmin;
+        background: $secondary;
+        box-shadow: inset 0 0 10px 7px $accent;
         .carInfo {
-            font-size: 1.5vmin;
+            font-size: 2vmin;
             width: 40vw;
             height: 2vh;
             margin: 0;
@@ -249,14 +251,19 @@ ul {
             list-style-type: none;
             justify-content: space-around;
             padding: 0;
+            background: $accent;
+            border-radius: 7px;
+            padding: 3px;
         }
         .carrouselButton {
             border: none;
-            background: none;
-            width: 5vw;
-            height: 28vh;
-            margin: 0;
+            background: $accent;
+            border-radius: 50%;
+            width: 2.5vw;
+            height: 2.5vw;
+            margin: 10px;
             padding: 0;
+            align-self: center;
             :nth-child(n) {
                 width: 2.5vw;
             }
@@ -287,6 +294,8 @@ ul {
             height: fit-content;
             padding: 0.5vmin;
             align-self: flex-end;
+            background: $accent;
+            border-radius: 7px;
             .collectionImg {
                 display: block;
                 height: 3vh;
@@ -304,20 +313,33 @@ ul {
         }
     }
     .portfolioIntent {
-        height: 39vh;
-        width: 39vw;
+        height: 38vh;
+        width: 38vw;
         margin: 1vmin;
         padding: 1vmin;
+        background: $accent;
         overflow-y: scroll;
         scrollbar-width: thin;
-        scrollbar-color: $primary;
-        border: 1px solid black;
+        scrollbar-color: $secondary $accent;
         border-radius: 5px;
+        border: 1px solid $accent;
+    }
+    .portfolioXArts {
+        height: 40vh;
+        width: 40vw;
+        .xArtsImg {
+            object-fit: contain;
+            width: 40vw;
+            height: 38vh;
+        }
     }
     .portfolioAutoportrait {
         max-width: 40vw;
         max-height: 40vh;
         object-fit: contain;
         margin: 1vmin;
+        background: $accent;
+        border-radius: 5px;
+        border: 1px solid $accent;
     }
 }

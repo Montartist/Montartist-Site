@@ -18,8 +18,10 @@ async function build(container, artist) {
   portfolioElementList.intent.innerHTML = artistObj.intention + '<br/><br/>Mail : <a class="portfolioMail" href="mailto:' + artistObj.mail+'">'+ artistObj.mail + '</a>'
   portfolioElementList.intent.setAttribute('class', 'portfolioIntent')
 
-  if (artistObj.xArts.length > 0) {
-    portfolioElementList.xArts = document.createElement('div')
+  if (artistObj.xArts.length > 0 && artist == 'Sybille_C') {
+    portfolioElementList.xArts = document.createElement('figure')
+    portfolioElementList.xArts.setAttribute('class', "portfolioXArts")
+    portfolioElementList.xArts.innerHTML = `<img class="xArtsImg" src="http://localhost/files/assets/images/oeuvres/portfolios/Sybille_C/xArts/${artistObj.xArts[2]}"><figcaption class="xArtsCaption"><span class="xArtsTitle">${artistObj.xArts[1]}</span>, photographie par ${artistObj.xArts[0]}</figcaption>`
   }
   portfolioElementList.autoportrait = document.createElement('img')
   portfolioElementList.autoportrait.setAttribute('src', `http://localhost/files/assets/images/oeuvres/portfolios/${artist}/${artistObj.autoportrait}`)

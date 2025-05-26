@@ -31,14 +31,14 @@
         "fName" : "Sybille_C",
         "intention" : "J’ai pris des cours d’arts plastiques de mes 6 à mes 11 ans pendant lesquels j’ai pu découvrir de nombreuses techniques (collage, dessin, pastels, fusain, acrylique, aquarelle) et m’ouvrir progressivement à l’Art. Je me suis remise à l’aquarelle, il y a maintenant bientôt deux ans. C’est ma technique coup de cœur car elle permet de créer fluidité et harmonie. Je trouve mon inspiration dans la beauté de la nature. J’aime utiliser la transparence de l’aquarelle et l’infini jeu de couleurs pour peindre principalement le ciel, l’eau, les arbres et les fleurs. Je crée majoritairement à partir de photos ou en m’inspirant d'œuvres déjà existantes, néanmoins je laisse parfois cours à mon imagination ce qui donne des compositions plus spontanées. Peindre est un moyen d'apaisement, c’est un moment que je prends pour moi et qui me ressource énormément. Lorsque je peins, j’écoute souvent de la musique ou des podcasts et je me reconnecte à mes sensations et à l’instant présent. À côté de cette pratique picturale, je passe la majorité de mon temps libre à danser qui est ma principale passion. La danse me permet de m’exprimer et de me libérer par le mouvement. La combinaison de ces différentes pratiques contribue à me nourrir artistiquement et cela m’apprend énormément de choses sur moi-même. Créer, rater, recommencer fait partie du processus et est un apprentissage de la vie. Cela permet de grandir en tant qu'artiste et en tant qu’être humain. “L’art rien que l’art ! C’est lui seul qui rend possible la vie, c’est la grande tentation qui entraîne à vivre, le grand stimulant qui pousse à vivre.” Nietzsche",
         "mail" : "sybille.christiany@gmail.com",
-        "xArts" : [],
+        "xArts" : ["Gabrielle Broc", "Danse et photographie" ,"danse_et_photographie.jpg"],
         "oeuvres" : [["Arbres et reflets", "arbres_et_reflets.jpg"], ["Coucher de soleil", "coucher_de_soleil.jpg"],["Fleur", "fleur.jpg"],["L'arbre", "l_arbre.jpg"],["La Forêt", "la_foret.jpg"],["Le Mont Artiste", "le_mont_artiste.jpg"],["Le phare" ,"le_phare.jpg"],["Le pont", "le_pont.jpg"],["Paysage Breton", "paysage_breton.jpg"],["Quatuor Féérique", "quatuor_feerique.jpg"]],
         "autoportrait" : "autoportrait.jpg"
     },
     "Linear-t" : {
         "name" : "Linear-t",    
         "fName" : "Linear-t",
-        "intention" : "Le dessin ça commence vraiment par des gribouillis informes fait dans un cahier qui ne fut pas acheté pour ça. Après ça évolue. On se dit qu'on aime ça et on continue. Puis on se crée ses personnages, son univers et après beaucoup plus de gribouillis, on sait que c'est plus qu'un simple passe temps. Ce que j'aime dessiné c'est le fantastique, l'irréel. Puisque après tout, pourquoi se limiter à ce qui existe déjà quand je peux créer ce que je veux? Aujourd'hui je dessine avec de l'or. La couleur dorée. C'est joli. Sur des couleurs qui rappellent la nuit pendant laquelle je crée. Parce que la nuit ça fait fuser l'inspiration. Par petits intervalles où je rajoute un coup de pinceau qui ne sera vu par personne d'autre que moi, se fondant dans la masse de détails. J’aime les détails, ça attire mon regard. Alors, je dessine.",
+        "intention" : "None",
         "mail" : "none",
         "xArts" : [],
         "oeuvres" : [["Studio PostProd", "studio_postprod.jpg"],["Ville Enneigée", "ville_enneigee.jpg"]],
@@ -47,7 +47,7 @@
     "Did" : {
         "name" : "Did",
         "fName" : "Did",
-        "intention" : "",
+        "intention" : "None",
         "mail" : "none",
         "xArts" : [],
         "oeuvres" : [],
