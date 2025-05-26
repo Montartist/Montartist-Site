@@ -8,12 +8,11 @@ body {
     background: $primary;
 }
 main {
-    width: 100vw;
+    width: 99.2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 2vh;
-    width: 99vw;
     background: $primary;
 }
 ul {
@@ -62,7 +61,7 @@ ul {
     }
 
     .subMenu {
-        background: white;
+        background: $secondary;
         position: fixed;
         right: 0;
         top: 0;
@@ -79,7 +78,7 @@ ul {
             padding: 15px;
             margin: 10px;
             margin-top: 5vmin;
-            background: #D6D5D3;
+            background: $accent;
         }
     }
 }
@@ -305,9 +304,15 @@ ul {
         }
     }
     .portfolioIntent {
-        height: 40vh;
-        width: 40vw;
+        height: 39vh;
+        width: 39vw;
         margin: 1vmin;
+        padding: 1vmin;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: $primary;
+        border: 1px solid black;
+        border-radius: 5px;
     }
     .portfolioAutoportrait {
         max-width: 40vw;
