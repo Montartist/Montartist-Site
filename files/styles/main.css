@@ -79,36 +79,30 @@ ul {
   background: #D6D5D3;
 }
 
-.hPage {
-  background: url(../assets/images/utils/headerBG.jpg) fixed no-repeat;
+#hPageHeader {
+  background-image: none;
 }
-.hPage .hSection {
-  background: none;
-}
-.hPage section {
+
+.hPage .imgSection {
+  width: 80vw;
+  height: 80vh;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding: 10px;
-  width: 85vw;
-}
-.hPage .pres-list {
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background: url(../assets/images/utils/homePageImg.jpg) center;
+  background-size: cover;
+  border: 1px solid #D6D5D3;
+  border-radius: 7px;
 }
-.hPage .pres-list > li {
-  padding: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin: 20px;
-  border: 1px solid black;
-  border-radius: 5px;
+.hPage .imgSection .gen-title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 10vw;
+  color: #4D5C63;
+}
+.hPage .hPageCarrousel {
+  margin: 5vh;
 }
 
 .carrousel {
@@ -120,7 +114,8 @@ ul {
   width: 80vw;
   margin-bottom: 1vh;
   border-radius: 7px;
-  border: 1px solid black;
+  border: 1px solid #D6D5D3;
+  box-shadow: inset 0 0 10px 7px #D6D5D3;
 }
 .carrousel .carInfo {
   font-size: 1.5vmin;
@@ -332,12 +327,32 @@ ul {
 .portfolioContainer .portfolioXArts {
   height: 40vh;
   width: 40vw;
+  margin: 1vmin;
+  border: 1px solid #D6D5D3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px 7px #D6D5D3;
 }
 .portfolioContainer .portfolioXArts .xArtsImg {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 40vw;
-  height: 38vh;
+  max-width: 40vw;
+  max-height: 37vh;
+  margin: 0;
+}
+.portfolioContainer .portfolioXArts .xArtsCaption {
+  background: #D6D5D3;
+  font-size: 1.8vmin;
+  text-align: center;
+  height: 3vh;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+}
+.portfolioContainer .portfolioXArts .xArtsCaption .xArtsTitle {
+  font-style: italic;
 }
 .portfolioContainer .portfolioAutoportrait {
   max-width: 40vw;

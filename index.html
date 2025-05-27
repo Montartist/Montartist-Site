@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="http://localhost/files/assets/images/utils/fav.ico" type="image/x-icon">
     </head>
     <body>
-        <header class="HEADER">
+        <header id="hPageHeader" class="HHEADER HEADER">
             <ul class="links">
                 <li id='bHome' class="link"><a class="link" href="">Montartist : Saison 2024-2025</a></li>
                 <li class="link"><a class="link" href="">HOME</a></li>
@@ -21,32 +21,10 @@
         </header>
         
         <main class="hPage">
-            <section class="hSection">
-                <h1 class="gentitle">Montartist</h1>
+            <section class="imgSection">
+                <h1 class="gen-title">Montartist</h1>
             </section>
-
-            <section>
-                <h2 class="subtitle">Notre mission</h2>
-                <p>Nous sommes une communauté d'artistes et de passionés d'arts qui souhaitent partager leur créativité et leur talent avec le monde.</p>
-            </section>
-
-            <section>
-                <h2 class="subtitle">Nos objectifs</h2>
-                <ul class="pres-list">
-                    <li>Présenter les oeuvres d'art des participants</li>
-                    <li>Créer une communauté d'artistes et de passionés d'arts</li>
-                    <li>Organiser des évènements et des expositions d'art</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2 class="subtitle">Nos fonctionnalités</h2>
-                <ul class="pres-list">
-                    <li>Carrousel d'images pour présenter les oeuvres d'art</li>
-                    <li>Page de portfolio pour présenter les oeuvres d'art des participants</li>
-                    <li>Page de contact pour nous contacter</li>
-                </ul>
-            </section>
+            <div class="carrousel hPageCarrousel"><ul class="carInfo"></ul><button class="carrouselL carrouselButton"><img src="../../files/assets/images/utils/left.svg" alt="Left"></button><img fetchpriority="high" class="carrouselImg" src="" alt=""/><button class="carrouselR carrouselButton"><img src="../../files/assets/images/utils/right.svg" alt="right"></button><div class="carrouselCollection"></div></div>
         </main>
     </body>
     <script type="module" src="http://localhost/files/scripts/main.js"></script>

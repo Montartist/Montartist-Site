@@ -30,7 +30,6 @@ async function build(container, artist) {
   for (var element of Object.keys(portfolioElementList)) {
     container.appendChild(portfolioElementList[element])
   }
-  console.log(portfolioElementList.carrousel)
   carrousel.carrousel(portfolioElementList.carrousel, artistObj.oeuvres, 'portfolio')
 }
 

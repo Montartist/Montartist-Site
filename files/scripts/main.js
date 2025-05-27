@@ -7,6 +7,10 @@ import * as portfolioBuilder from 'http://localhost/files/scripts/portfolioBuild
 var menuBar = document.querySelector('.HEADER')
 menubar.createMenuBar(menuBar)
 
+//Carrousel for Home Page
+if (document.URL == 'http://localhost/' || document.URL ==  'http://127.0.0.1/') {
+    carrousel.carrousel(document.querySelector(".carrousel"), await dataLoad.createHPageImageList('http://localhost/files/data/portfolio.json'), "hpage")
+}
 
 //Carrousel for participants page
 var filter = document.querySelector('#filterInput')
