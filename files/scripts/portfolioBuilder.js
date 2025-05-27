@@ -11,7 +11,7 @@ async function build(container, artist) {
   portfolioElementList.title.setAttribute('class', 'portfolioTitle')
 
   portfolioElementList.carrousel = document.createElement('div')
-  portfolioElementList.carrousel.innerHTML = `<ul class="carInfo"></ul><button class="carrouselL carrouselButton"><img src="../../files/assets/images/utils/left.svg" alt="Left"></button><img fetchpriority="high" class="carrouselImg" src="" alt=""/><button class="carrouselR carrouselButton"><img src="../../files/assets/images/utils/right.svg" alt="right"></button><div class="carrouselCollection"></div>`
+  portfolioElementList.carrousel.innerHTML = `<ul class="carInfo"></ul><button class="carrouselL carrouselButton"><img src="../../files/assets/images/utils/left.svg" alt="Bouton gauche"></button><img fetchpriority="high" class="carrouselImg" src="" alt="Image du carrousel"/><button class="carrouselR carrouselButton"><img src="../../files/assets/images/utils/right.svg" alt="Bouton droite"></button><div class="carrouselCollection"></div>`
   portfolioElementList.carrousel.setAttribute('class', "portfolioCarrousel")
 
   portfolioElementList.intent = document.createElement('p')
@@ -26,6 +26,7 @@ async function build(container, artist) {
   portfolioElementList.autoportrait = document.createElement('img')
   portfolioElementList.autoportrait.setAttribute('src', `http://localhost/files/assets/images/oeuvres/portfolios/${artist}/${artistObj.autoportrait}`)
   portfolioElementList.autoportrait.setAttribute('class', 'portfolioAutoportrait')
+  portfolioElementList.autoportrait.setAttribute('alt', `Autoportrait de ${artistObj.name}`)
 
   for (var element of Object.keys(portfolioElementList)) {
     container.appendChild(portfolioElementList[element])

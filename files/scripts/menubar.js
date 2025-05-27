@@ -21,7 +21,7 @@ async function createMenuBar(menuBarObj) {
 			li.setAttribute('class', 'subItem')
 			document.querySelectorAll('.subMenu')[1].appendChild(li)
 			var a = document.createElement('a')
-			a.setAttribute('href', `http://localhost/Portfolio/${portfolioParticipants[participant].fName}`)
+			a.setAttribute('href', `http://localhost/Portfolio/${participant}`)
 			li.appendChild(a)
 			a.innerHTML = portfolioParticipants[participant].name
 		}

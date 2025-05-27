@@ -91,6 +91,7 @@ ul {
     .imgSection {
         width: 80vw;
         height: 80vh;
+        margin: 2.5vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -109,6 +110,14 @@ ul {
     .hPageCarrousel {
         margin: 5vh;
     }
+    .aboutUs {
+        margin: 2.5vh;
+        width: 80vw;
+        padding: 1vmin;
+        background: $secondary;
+        border: 1px solid $accent;
+        border-radius: 7px;
+    }
 }
 
 .carrousel {
@@ -123,6 +132,7 @@ ul {
     border: 1px solid $accent;
     box-shadow: inset 0 0 10px 7px $accent;
     .carInfo {
+        color: $primary;
         font-size: 1.5vmin;
         width: 80vw;
         height: 2vh;
@@ -186,7 +196,7 @@ ul {
             object-fit: scale-down;
         }
         .displayedImg {
-            border: 2px solid red;
+            border: 2px solid $primary;
             max-height: 5vh;
             max-width: 5vh;
         }
@@ -240,6 +250,7 @@ ul {
         background: $secondary;
         box-shadow: inset 0 0 10px 7px $accent;
         .carInfo {
+            color: $primary;
             font-size: 2vmin;
             width: 40vw;
             height: 2vh;
@@ -303,7 +314,7 @@ ul {
                 object-fit: scale-down;
             }
             .displayedImg {
-                border: 2px solid red;
+                border: 2px solid $primary;
                 max-height: 5vh;
                 max-width: 5vh;
             }
@@ -358,5 +369,25 @@ ul {
         background: $accent;
         border-radius: 5px;
         border: 1px solid $accent;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 2.5vh;
+    background: $accent;
+    padding: 10px;
+    border-radius: 10px;
+    .contactUs {
+        margin: 0;
+    }
+    .collab {
+        margin: 0;
+        .logoRegarde {
+            height: 6vh;
+            vertical-align: middle;
+        }
     }
 }

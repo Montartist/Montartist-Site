@@ -13,6 +13,7 @@ async function carrousel(carrouselObj, imgList, useCase) {
 	carrouselCollection.innerHTML = ''
 	for (var i of imgList) {
 		var img = document.createElement('img')
+		img.setAttribute("alt", "")
 		carrouselCollection.appendChild(img)
 	}
 
