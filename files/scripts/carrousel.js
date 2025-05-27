@@ -1,6 +1,5 @@
 
 async function carrousel(carrouselObj, imgList, useCase) {
-	console.log(imgList)
 	var carrouselHTML = carrouselObj.innerHTML
 	carrouselObj.innerHTML = ''
 	carrouselObj.innerHTML = carrouselHTML

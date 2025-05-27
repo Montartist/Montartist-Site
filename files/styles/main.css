@@ -230,6 +230,7 @@ ul {
   max-width: 85vw;
   border-radius: 7px;
   background-color: #859A9D;
+  border: 1px solid #D6D5D3;
 }
 .portfolioContainer .portfolioTitle {
   height: 5vh;

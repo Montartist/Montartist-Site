@@ -33,18 +33,18 @@
     },
     "Linear-t" : {
         "name" : "Linear-t",
-        "intention" : "None",
-        "mail" : "none",
-        "xArts" : [],
-        "oeuvres" : [["Studio PostProd", "studio_postprod.jpg"],["Ville Enneigée", "ville_enneigee.jpg"]],
-        "autoportrait" : "autoportrait.jpeg"
+        "intention" : "J'aime dessiner et peindre des paysages. Je me pose durant une après-midi insitu pour faire une aquarelle ou dans un atelier pour réaliser une toile à l'huile ou à l'acrylique d'un paysage nouveau. Par l'enseignement de ma professeure diplômée de l'école Martenot, j'applique ses techniques telles que la perspective et la gestion des couleurs et des lumières par le cercle chromatique, c'est ce qui me plaît dans cet art : la théorie appliquée au visuel. Ce que je préfère aussi c'est cette immersion dans une ambiance encadrée comme dans une fenêtre, nous ouvrant vers un extérieur à admirer.",
+        "mail" : "linedupuy.pro@gmail.com",
+        "xArts" : ["Danseuse S", "danseuse_s.jpg"],
+        "oeuvres" : [["Studio PostProd", "studio_postprod.jpg"],["Ville Enneigée", "ville_enneigee.jpg"],["Excalibur", "excalibur.jpg"],["Le passage", "le_passage.jpg"],["Aurore Boréale", "aurore_boreale.jpg"],["Comme chez soi", "comme_chez_soi.jpg"]],
+        "autoportrait" : "autoportrait.jpg"
     },
     "Did" : {
         "name" : "Did",
-        "intention" : "None",
-        "mail" : "none",
-        "xArts" : [],
-        "oeuvres" : [],
-        "autoportrait" : ""
+        "intention" : "Je crée avec ce que je ressens, pas toujours avec ce que je vois Dessiner, pour moi, c'est une manière de traduire ce qui n'a pas forcément de mots. Des émotions floues, des pensées qui passent vite, des instants suspendus. Je travaille souvent de façon instinctive. Parfois je commence sans idée précise, juste une ambiance, une image mentale, une sensation. Je laisse venir les formes, les couleurs, les lignes... Et peu à peu, quelque chose se construit. Je dessine beaucoup sur iPad, parce que ça me permet d'explorer, de superposer, d'effacer, de recommencer sans limite. Mais je garde toujours une approche manuelle, presque tactile, même dans le numérique. Mon univers est souvent mêlé d'imaginaire, de mélancolie, ou d'un peu de magie discrète. Je m'inspire des gens, des musiques, des rêves flous, des fragments d'images qui me restent en tête sans raison, de mes lectures. Je ne cherche pas forcément à faire joli ou parfait. Ce que je veux, c'est que ça dise quelque chose, que ça touche, même sans qu'on sache expliquer pourquoi.",
+        "mail" : "amandinepenhas@gmail.com",
+        "xArts" : ["IMG_0754","img_0754.jpeg"],
+        "oeuvres" : [["IMG_0676", "IMG_0676.jpeg"],["IMG_0711", "img_0711.jpeg"],["IMG_0712", "img_0712.jpeg"],["IMG_0713", "img_0713.jpeg"],["IMG_0762", "img_0762.jpeg"],["IMG_0764", "img_0764.jpeg"]],
+        "autoportrait" : "autoportrait.jpeg"
     }
 }
