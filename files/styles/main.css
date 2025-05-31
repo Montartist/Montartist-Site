@@ -108,10 +108,12 @@ ul {
 .hPage .aboutUs {
   margin: 2.5vh;
   width: 80vw;
-  padding: 1vmin;
   background: #859A9D;
   border: 1px solid #D6D5D3;
   border-radius: 7px;
+}
+.hPage .aboutUs :nth-child(n) {
+  margin: 1vmin;
 }
 
 .carrousel {

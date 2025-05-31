@@ -113,10 +113,12 @@ ul {
     .aboutUs {
         margin: 2.5vh;
         width: 80vw;
-        padding: 1vmin;
         background: $secondary;
         border: 1px solid $accent;
         border-radius: 7px;
+        :nth-child(n) {
+            margin: 1vmin
+        }
     }
 }
 
