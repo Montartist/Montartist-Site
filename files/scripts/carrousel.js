@@ -41,9 +41,9 @@ async function carrousel(carrouselObj, imgList, useCase) {
 			} else {
 				var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10)
 			}
-			carrouselCollection.children[i].setAttribute('src', `http://localhost/files/assets/images/oeuvres/portfolios/${artist}/oeuvres/${imgList[i][1]}`)
+			carrouselCollection.children[i].setAttribute('src', `https://montartist.net/files/assets/images/oeuvres/portfolios/${artist}/oeuvres/${imgList[i][1]}`)
 		} else if (useCase == "hpage") {
-			carrouselCollection.children[i].setAttribute('src', `http://localhost/files/assets/images/oeuvres/portfolios/${imgList[i][3]}/oeuvres/${imgList[i][1]}`)
+			carrouselCollection.children[i].setAttribute('src', `https://montartist.net/files/assets/images/oeuvres/portfolios/${imgList[i][3]}/oeuvres/${imgList[i][1]}`)
 		}
 
 		carrouselCollection.children[i].addEventListener('click', function () {
@@ -90,10 +90,10 @@ function setImg(imgId, imgList, carrousel, useCase) {
 			var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10)
 		}
 		carInfo.innerHTML = `<li>${imgAct[0]}</li>`
-		carrouselImg.setAttribute('src', `http://localhost/files/assets/images/oeuvres/portfolios/${artist}/oeuvres/${imgAct[1]}`)
+		carrouselImg.setAttribute('src', `https://montartist.net/files/assets/images/oeuvres/portfolios/${artist}/oeuvres/${imgAct[1]}`)
 	} else if (useCase == "hpage") {
 		carInfo.innerHTML = `<li>Nom : ${imgAct[0]}</li><li>Artiste : ${imgAct[2]}</li>`
-		carrouselImg.setAttribute('src', `http://localhost/files/assets/images/oeuvres/portfolios/${imgAct[3]}/oeuvres/${imgAct[1]}`)
+		carrouselImg.setAttribute('src', `https://montartist.net/files/assets/images/oeuvres/portfolios/${imgAct[3]}/oeuvres/${imgAct[1]}`)
 	}
 	for (var img of carrousel.lastChild.children) {
 		img.removeAttribute('class')
