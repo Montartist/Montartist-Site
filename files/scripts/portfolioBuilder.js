@@ -1,8 +1,8 @@
-import * as dataLoad from 'http://localhost/files/scripts/dataLoad.js'
-import * as carrousel from 'http://localhost/files/scripts/carrousel.js'
+import * as dataLoad from 'https://montartist.net/files/scripts/dataLoad.js'
+import * as carrousel from 'https://montartist.net/files/scripts/carrousel.js'
 
 async function build(container, artist) {
-  var artists = await dataLoad.requestJSON('http://localhost/files/data/portfolio.json')
+  var artists = await dataLoad.requestJSON('https://montartist.net/files/data/portfolio.json')
   var artistObj = artists[artist]
   var portfolioElementList = {}
 
@@ -21,14 +21,14 @@ async function build(container, artist) {
   if (artistObj.xArts.length > 0 && artist == 'Sybille_C') {
     portfolioElementList.xArts = document.createElement('figure')
     portfolioElementList.xArts.setAttribute('class', "portfolioXArts")
-    portfolioElementList.xArts.innerHTML = `<img class="xArtsImg" alt='Oeuvre "À la croisée des arts" de Sybille C' src="http://localhost/files/assets/images/oeuvres/portfolios/Sybille_C/xArts/${artistObj.xArts[2]}"><figcaption class="xArtsCaption"><span class="xArtsTitle">${artistObj.xArts[1]}</span>, photographie par ${artistObj.xArts[0]}</figcaption>`
+    portfolioElementList.xArts.innerHTML = `<img class="xArtsImg" alt='Oeuvre "À la croisée des arts" de Sybille C' src="https://montartist.net/files/assets/images/oeuvres/portfolios/Sybille_C/xArts/${artistObj.xArts[2]}"><figcaption class="xArtsCaption"><span class="xArtsTitle">${artistObj.xArts[1]}</span>, photographie par ${artistObj.xArts[0]}</figcaption>`
   } else if (artistObj.xArts.length > 0 && artist != 'Sybille_C') {
     portfolioElementList.xArts = document.createElement('figure')
     portfolioElementList.xArts.setAttribute('class', "portfolioXArts")
-    portfolioElementList.xArts.innerHTML = `<img class="xArtsImg" alt='Oeuvre "À la croisée des arts" de ${artistObj.name}' src="http://localhost/files/assets/images/oeuvres/portfolios/${artist}/xArts/${artistObj.xArts[1]}"><figcaption class="xArtsCaption"><span class="xArtsTitle">${artistObj.xArts[0]}</span></figcaption>`
+    portfolioElementList.xArts.innerHTML = `<img class="xArtsImg" alt='Oeuvre "À la croisée des arts" de ${artistObj.name}' src="https://montartist.net/files/assets/images/oeuvres/portfolios/${artist}/xArts/${artistObj.xArts[1]}"><figcaption class="xArtsCaption"><span class="xArtsTitle">${artistObj.xArts[0]}</span></figcaption>`
   }
   portfolioElementList.autoportrait = document.createElement('img')
-  portfolioElementList.autoportrait.setAttribute('src', `http://localhost/files/assets/images/oeuvres/portfolios/${artist}/${artistObj.autoportrait}`)
+  portfolioElementList.autoportrait.setAttribute('src', `https://montartist.net/files/assets/images/oeuvres/portfolios/${artist}/${artistObj.autoportrait}`)
   portfolioElementList.autoportrait.setAttribute('class', 'portfolioAutoportrait')
   portfolioElementList.autoportrait.setAttribute('alt', `Autoportrait de ${artistObj.name}`)
 
