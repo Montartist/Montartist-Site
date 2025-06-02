@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap");
 body {
-  font-family: Arial;
+  font-family: Cambria, Arial;
   margin: 0;
   background: #4D5C63;
 }
@@ -98,14 +99,19 @@ ul {
 .hPage .imgSection .gen-title {
   margin: 0;
   padding: 0;
+  padding-top: 10vmax;
   text-align: center;
   font-size: 10vw;
   color: #4D5C63;
+  font-family: "GFS Didot", Arial;
 }
 .hPage .hPageCarrousel {
   margin: 5vh;
 }
 .hPage .aboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 2.5vh;
   width: 80vw;
   background: #859A9D;
@@ -114,6 +120,10 @@ ul {
 }
 .hPage .aboutUs :nth-child(n) {
   margin: 1vmin;
+}
+.hPage .aboutUs .aboutUsResp {
+  text-align: end;
+  align-self: self-end;
 }
 
 .carrousel {

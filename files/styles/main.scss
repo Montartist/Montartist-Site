@@ -1,9 +1,12 @@
 $primary: #4D5C63;
 $secondary: #859A9D;
 $accent: #D6D5D3;
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+
+
 
 body {
-    font-family: Arial;
+    font-family: Cambria, Arial;
     margin: 0;
     background: $primary;
 }
@@ -102,22 +105,31 @@ ul {
         .gen-title {    
             margin: 0;
             padding: 0;
+            padding-top: 10vmax;
             text-align: center;
             font-size: 10vw;
-            color: $primary
+            color: $primary;
+            font-family: "GFS Didot", Arial;
         }
     }
     .hPageCarrousel {
         margin: 5vh;
     }
     .aboutUs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin: 2.5vh;
         width: 80vw;
         background: $secondary;
         border: 1px solid $accent;
         border-radius: 7px;
         :nth-child(n) {
-            margin: 1vmin
+            margin: 1vmin;
+        }
+        .aboutUsResp {
+            text-align: end;
+            align-self: self-end;
         }
     }
 }
