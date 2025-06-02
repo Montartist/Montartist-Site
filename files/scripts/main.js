@@ -1,41 +1,41 @@
-import * as dataLoad from 'https://montartist.net/files/scripts/dataLoad.js'
-import * as carrousel from 'https://montartist.net/files/scripts/carrousel.js'
-import * as menubar from 'https://montartist.net/files/scripts/menubar.js'
-import * as portfolioBuilder from 'https://montartist.net/files/scripts/portfolioBuilder.js'
+import * as dataLoad from `https://${location.hostname}/files/scripts/dataLoad.js`
+import * as carrousel from `https://${location.hostname}/files/scripts/carrousel.js`
+import * as menubar from `https://${location.hostname}/files/scripts/menubar.js`
+import * as portfolioBuilder from `https://${location.hostname}/files/scripts/portfolioBuilder.js`
 
 //Menubar
 var menuBar = document.querySelector('.HEADER')
 menubar.createMenuBar(menuBar)
 
 //Carrousel for Home Page
-if (document.URL == 'https://montartist.net/' || document.URL ==  'https://127.0.0.1/') {
-    carrousel.carrousel(document.querySelector(".carrousel"), await dataLoad.createHPageImageList('https://montartist.net/files/data/portfolio.json'), "hpage")
+if (document.URL == `https://${location.hostname}/` || document.URL ==  'https://127.0.0.1/') {
+    carrousel.carrousel(document.querySelector(".carrousel"), await dataLoad.createHPageImageList(`https://${location.hostname}/files/data/portfolio.json`), "hpage")
 }
 
 //Carrousel for participants page
 var filter = document.querySelector('#filterInput')
 
-if (document.URL == 'https://montartist.net/Concours/Participants') {
+if (document.URL == `https://${location.hostname}/Concours/Participants`) {
     var carrouselPart = document.querySelector('.carrousel')
-    carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList('https://montartist.net/files/data/concours.json', 'Tous'), 'concours')
+    carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList(`https://${location.hostname}/files/data/concours.json`, 'Tous'), 'concours')
     filter.addEventListener('change', function () {
         refreshPartCarrousel(filter)
     })
     async function refreshPartCarrousel(filter) {
-        carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList('https://montartist.net/files/data/concours.json', filter.value), 'concours')
+        carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList(`https://${location.hostname}/files/data/concours.json`, filter.value), 'concours')
     }
 }
 
 
 //Carrousel for selected page
-if (document.URL == 'https://montartist.net/Concours/Selectionnes') {
+if (document.URL == 'https://${location.hostname}/Concours/Selectionnes') {
     var carrouselSel = document.querySelector('.carrousel')
-    carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList('https://montartist.net/files/data/concours.json', 'Tous'), 'concours')
+    carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList(`https://${location.hostname}/files/data/concours.json`, 'Tous'), 'concours')
     filter.addEventListener('change', function () {
         refreshSelCarrousel(filter)
     })
     async function refreshSelCarrousel(filter) {
-        carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList('https://montartist.net/files/data/concours.json', filter.value), 'concours')
+        carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList(`https://${location.hostname}/files/data/concours.json`, filter.value), 'concours')
     }
 }
 

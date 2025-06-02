@@ -9,23 +9,23 @@ async function createPartImageList(url, set) {
 	var imgList = []
 	if (set == 'Tous') {
 		for (var oeuvre of loadedData['Numériques']) {
-			oeuvre.file = `https://montartist.net/files/assets/images/oeuvres/concours/numeriques/${oeuvre.file}`
+			oeuvre.file = `https://${location.hostname}/files/assets/images/oeuvres/concours/numeriques/${oeuvre.file}`
 			imgList.push(oeuvre)
 		}
 		for (var oeuvre of loadedData['Traditionnels']) {
-			oeuvre.file = `https://montartist.net/files/assets/images/oeuvres/concours/traditionnels/${oeuvre.file}`
+			oeuvre.file = `https://${location.hostname}/files/assets/images/oeuvres/concours/traditionnels/${oeuvre.file}`
 			imgList.push(oeuvre)
 		}
 	}
 	if (set == 'Numériques') {
 		for (var oeuvre of loadedData['Numériques']) {
-			oeuvre.file = `https://montartist.net/files/assets/images/oeuvres/concours/numeriques/${oeuvre.file}`
+			oeuvre.file = `https://${location.hostname}/files/assets/images/oeuvres/concours/numeriques/${oeuvre.file}`
 			imgList.push(oeuvre)
 		}
 	}
 	if (set == 'Traditionnels') {
 		for (var oeuvre of loadedData['Traditionnels']) {
-			oeuvre.file = `https://montartist.net/files/assets/images/oeuvres/concours/traditionnels/${oeuvre.file}`
+			oeuvre.file = `https://${location.hostname}/files/assets/images/oeuvres/concours/traditionnels/${oeuvre.file}`
 			imgList.push(oeuvre)
 		}
 	}
@@ -38,13 +38,13 @@ async function createSelImageList(url, set) {
 	if (set == 'Tous') {
 		for (var oeuvre of loadedData['Numériques']) {
 			if (oeuvre['sélectionné']) {
-				oeuvre.file = `https://montartist.net/files/assets/images/oeuvres/concours/numeriques/${oeuvre.file}`
+				oeuvre.file = `https://${location.hostname}/files/assets/images/oeuvres/concours/numeriques/${oeuvre.file}`
 				imgList.push(oeuvre)
 			}
 		}
 		for (var oeuvre of loadedData['Traditionnels']) {
 			if (oeuvre['sélectionné']) {
-				oeuvre.file = `https://montartist.net/files/assets/images/oeuvres/concours/traditionnels/${oeuvre.file}`
+				oeuvre.file = `https://${location.hostname}/files/assets/images/oeuvres/concours/traditionnels/${oeuvre.file}`
 				imgList.push(oeuvre)
 			}
 		}
@@ -52,7 +52,7 @@ async function createSelImageList(url, set) {
 	if (set == 'Numériques') {
 		for (var oeuvre of loadedData['Numériques']) {
 			if (oeuvre['sélectionné']) {
-				oeuvre.file = `https://montartist.net/files/assets/images/oeuvres/concours/numeriques/${oeuvre.file}`
+				oeuvre.file = `https://${location.hostname}/files/assets/images/oeuvres/concours/numeriques/${oeuvre.file}`
 				imgList.push(oeuvre)
 			}
 		}
@@ -60,7 +60,7 @@ async function createSelImageList(url, set) {
 	if (set == 'Traditionnels') {
 		for (var oeuvre of loadedData['Traditionnels']) {
 			if (oeuvre['sélectionné']) {
-				oeuvre.file = `https://montartist.net/files/assets/images/oeuvres/concours/traditionnels/${oeuvre.file}`
+				oeuvre.file = `https://${location.hostname}/files/assets/images/oeuvres/concours/traditionnels/${oeuvre.file}`
 				imgList.push(oeuvre)
 			}
 		}
