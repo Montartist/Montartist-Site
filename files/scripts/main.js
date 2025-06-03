@@ -1,9 +1,4 @@
 
-import * as dataLoad from 'https://montartist.net/files/scripts/dataLoad.js'
-import * as carrousel from 'https://montartist.net/files/scripts/carrousel.js'
-import * as menubar from 'https://montartist.net/files/scripts/menubar.js'
-import * as portfolioBuilder from 'https://montartist.net/files/scripts/portfolioBuilder.js'
-
 import * as dataLoad from 'https://www.montartist.net/files/scripts/dataLoad.js'
 import * as carrousel from 'https://www.montartist.net/files/scripts/carrousel.js'
 import * as menubar from 'https://www.montartist.net/files/scripts/menubar.js'

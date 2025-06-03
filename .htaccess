@@ -2,3 +2,7 @@
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{ENV:HTTPS} on
+RewriteCond %{HTTP_HOST} ^montartist\.net$
+RewriteRule (.*) https://www.montartist.net/$1 [R=301,L]
