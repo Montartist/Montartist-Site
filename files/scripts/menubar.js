@@ -1,4 +1,5 @@
 import * as dataLoad from 'https://montartist.net/files/scripts/dataLoad.js'
+import * as dataLoad from 'https://www.montartist.net/files/scripts/dataLoad.js'
 async function createMenuBar(menuBarObj) {
 	var body = document.querySelector('body')
 	var menuConcours = menuBarObj.children[0].children[2]

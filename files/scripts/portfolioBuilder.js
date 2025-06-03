@@ -1,6 +1,9 @@
 import * as dataLoad from 'https://montartist.net/files/scripts/dataLoad.js'
 import * as carrousel from 'https://montartist.net/files/scripts/carrousel.js'
 
+import * as dataLoad from 'https://www.montartist.net/files/scripts/dataLoad.js'
+import * as carrousel from 'https://www.montartist.net/files/scripts/carrousel.js'
+
 async function build(container, artist) {
   var artists = await dataLoad.requestJSON(`https://${location.hostname}/files/data/portfolio.json`)
   var artistObj = artists[artist]
