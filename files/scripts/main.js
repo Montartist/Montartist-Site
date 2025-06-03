@@ -17,6 +17,7 @@ if (document.URL == `https://${location.hostname}/` || document.URL ==  'https:/
 var filter = document.querySelector('#filterInput')
 
 if (document.URL == `https://${location.hostname}/Concours/Participants`) {
+    console.log('coucou il se passe un truc par ici')
     var carrouselPart = document.querySelector('.carrousel')
     carrousel.carrousel(carrouselPart, await dataLoad.createPartImageList(`https://${location.hostname}/files/data/concours.json`, 'Tous'), 'concours')
     filter.addEventListener('change', function () {
@@ -30,6 +31,7 @@ if (document.URL == `https://${location.hostname}/Concours/Participants`) {
 
 //Carrousel for selected page
 if (document.URL == 'https://${location.hostname}/Concours/Selectionnes') {
+    console.log('coucou il se passe un truc par ici')
     var carrouselSel = document.querySelector('.carrousel')
     carrousel.carrousel(carrouselSel, await dataLoad.createSelImageList(`https://${location.hostname}/files/data/concours.json`, 'Tous'), 'concours')
     filter.addEventListener('change', function () {
