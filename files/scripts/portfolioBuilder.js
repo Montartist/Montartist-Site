@@ -15,7 +15,7 @@ async function build(container, artist) {
   portfolioElementList.carrousel.setAttribute('class', "portfolioCarrousel")
 
   portfolioElementList.intent = document.createElement('p')
-  portfolioElementList.intent.innerHTML = artistObj.intention + '<br/><br/>Mail : <a class="portfolioMail" href="mailto:' + artistObj.mail+'">'+ artistObj.mail + '</a>'
+  portfolioElementList.intent.innerHTML = artistObj.intention + '<br/><br/>Contact : <a class="portfolioMail" href="mailto:' + artistObj.mail+'">'+ artistObj.mail + '</a>'
   portfolioElementList.intent.setAttribute('class', 'portfolioIntent')
 
   if (artistObj.xArts.length > 0 && artist == 'Sybille_C') {
