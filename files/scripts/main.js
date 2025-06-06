@@ -1,8 +1,8 @@
 
-import * as dataLoad from 'https://www.montartist.net/files/scripts/dataLoad.js'
-import * as carrousel from 'https://www.montartist.net/files/scripts/carrousel.js'
-import * as menubar from 'https://www.montartist.net/files/scripts/menubar.js'
-import * as portfolioBuilder from 'https://www.montartist.net/files/scripts/portfolioBuilder.js'
+import * as dataLoad from 'dataLoad.js'
+import * as carrousel from 'carrousel.js'
+import * as menubar from 'menubar.js'
+import * as portfolioBuilder from 'portfolioBuilder.js'
 
 //Menubar
 var menuBar = document.querySelector('.HEADER')
