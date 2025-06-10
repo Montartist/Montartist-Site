@@ -5,9 +5,9 @@ async function carrousel(carrouselObj, imgList, useCase) {
 	carrouselObj.innerHTML = carrouselHTML
 
 	var imgId = 0
-	var carrouselButtonsLeft = carrouselObj.children[1]
-	var carrouselButtonsRight = carrouselObj.children[3]
-	var carrouselCollection = carrouselObj.lastChild
+	var carrouselButtonsLeft = carrouselObj.querySelector('.carrouselL')
+	var carrouselButtonsRight = carrouselObj.querySelector('.carrouselR')
+	var carrouselCollection = carrouselObj.querySelector('.carrouselCollection')
 	
 	carrouselCollection.innerHTML = ''
 	for (var i of imgList) {
@@ -41,9 +41,9 @@ async function carrousel(carrouselObj, imgList, useCase) {
 			} else {
 				var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10)
 			}
-			carrouselCollection.children[i].setAttribute('src', `https://${location.hostname}/files/assets/images/oeuvres/portfolios/${artist}/oeuvres/${imgList[i][1]}`)
+			carrouselCollection.children[i].setAttribute('src', `file:///home/lilguy/code/Montartist-Site${location.hostname}/files/assets/images/oeuvres/portfolios/${artist}/oeuvres/${imgList[i][1]}`)
 		} else if (useCase == "hpage") {
-			carrouselCollection.children[i].setAttribute('src', `https://${location.hostname}/files/assets/images/oeuvres/portfolios/${imgList[i][3]}/oeuvres/${imgList[i][1]}`)
+			carrouselCollection.children[i].setAttribute('src', `file:///home/lilguy/code/Montartist-Site${location.hostname}/files/assets/images/oeuvres/portfolios/${imgList[i][3]}/oeuvres/${imgList[i][1]}`)
 		}
 
 		carrouselCollection.children[i].addEventListener('click', function () {
@@ -78,7 +78,7 @@ async function carrousel(carrouselObj, imgList, useCase) {
 
 function setImg(imgId, imgList, carrousel, useCase) {
 	var carInfo = carrousel.children[0]
-	var carrouselImg = carrousel.children[2]
+	var carrouselImg = carrousel.querySelector('.carrousel-img-container').children[0]
 	var imgAct = imgAct = imgList[imgId]
 	if (useCase == "concours") {
 		carInfo.innerHTML = `<li>Nom : ${imgAct.name}</li><li>Artiste : ${imgAct.artiste}</li><li>Sélectionnée : ${{false : "non", true : "oui"}[imgAct['sélectionné']]}</li>`
@@ -90,16 +90,16 @@ function setImg(imgId, imgList, carrousel, useCase) {
 			var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10)
 		}
 		carInfo.innerHTML = `<li>${imgAct[0]}</li>`
-		carrouselImg.setAttribute('src', `https://${location.hostname}/files/assets/images/oeuvres/portfolios/${artist}/oeuvres/${imgAct[1]}`)
+		carrouselImg.setAttribute('src', `file:///home/lilguy/code/Montartist-Site${location.hostname}/files/assets/images/oeuvres/portfolios/${artist}/oeuvres/${imgAct[1]}`)
 	} else if (useCase == "hpage") {
 		carInfo.innerHTML = `<li>Nom : ${imgAct[0]}</li><li>Artiste : ${imgAct[2]}</li>`
-		carrouselImg.setAttribute('src', `https://${location.hostname}/files/assets/images/oeuvres/portfolios/${imgAct[3]}/oeuvres/${imgAct[1]}`)
+		carrouselImg.setAttribute('src', `file:///home/lilguy/code/Montartist-Site${location.hostname}/files/assets/images/oeuvres/portfolios/${imgAct[3]}/oeuvres/${imgAct[1]}`)
 	}
-	for (var img of carrousel.lastChild.children) {
+	for (var img of carrousel.querySelector('.carrouselCollection').children) {
 		img.removeAttribute('class')
 		img.setAttribute('class', 'collectionImg')
 	}
-	carrousel.lastChild.children[imgId].setAttribute('class', 'collectionImg displayedImg')
+	carrousel.querySelector('.carrouselCollection').children[imgId].setAttribute('class', 'collectionImg displayedImg')
 }
 
 export {carrousel, setImg}
