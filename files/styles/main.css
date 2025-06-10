@@ -2,30 +2,36 @@
 body {
   font-family: Cambria, Arial;
   margin: 0;
-  background: #4D5C63;
+  background: #455459;
+  color: #ffffff;
+  font-size: 10px;
 }
 
 main {
-  width: 99.2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 2vh;
-  background: #4D5C63;
+  font-size: 1.5rem;
+  background: #455459;
 }
 
-ul {
-  list-style-type: disc;
+@media screen and (max-width: 1200px) {
+  #header {
+    background-image: url(../assets/images/utils/le_mont_artiste.jpg);
+    background-size: cover;
+    background-position: top center;
+    height: 50vh;
+  }
 }
-
-.header {
-  height: 50vh;
-  background-image: url(../assets/images/utils/le_mont_artiste.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
+@media screen and (min-width: 1200px) {
+  #header {
+    background-image: url(../assets/images/utils/homePageImg.jpg);
+    background-size: cover;
+    background-position: top center;
+    height: 60vh;
+  }
 }
-.header .links {
+#header .hlinks {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -33,7 +39,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-.header .links .link {
+#header .hlinks .hlink {
   text-decoration: none;
   color: black;
   cursor: pointer;
@@ -41,57 +47,29 @@ ul {
   padding-bottom: 3vh;
   padding-right: 20px;
 }
-.header .links #bHome {
+#header .hlinks #hHome {
   margin-right: auto;
   margin-left: 0;
   padding-left: 20px;
 }
 
-#hPageHeader {
-  background-image: none;
-}
-
-.hPage .montartistImg img {
-  max-width: 100%;
-}
-.hPage .imgSection {
-  width: 80vw;
-  height: 80vh;
-  margin: 2.5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(../assets/images/utils/homePageImg.jpg) center;
-  background-size: cover;
-  border: 1px solid #D6D5D3;
-  border-radius: 7px;
-}
-.hPage .imgSection .gen-title {
-  margin: 0;
-  padding: 0;
-  padding-top: 10vmax;
-  text-align: center;
-  font-size: 10vw;
-  color: #4D5C63;
-  font-family: "GFS Didot", Arial;
-}
-.hPage .hPageCarrousel {
-  margin: 5vh;
-}
-.hPage .aboutUs {
+#aboutUs {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2.5vh;
-  width: 80vw;
-  background: #859A9D;
-  border: 1px solid #D6D5D3;
-  border-radius: 7px;
+  margin: 4em 10em;
 }
-.hPage .aboutUs :nth-child(n) {
-  margin: 1vmin;
+#aboutUs h2 {
+  width: 70%;
+  padding-bottom: 1em;
+  border-bottom: #ffffff solid 2px;
+  text-align: center;
+  margin-top: 0;
 }
-.hPage .aboutUs .aboutUsResp {
+#aboutUs p {
+  text-align: justify;
+}
+#aboutUs #aboutUsResp {
   text-align: end;
   align-self: self-end;
 }
@@ -109,7 +87,7 @@ ul {
   box-shadow: inset 0 0 10px 7px #D6D5D3;
 }
 .carrousel .carInfo {
-  color: #4D5C63;
+  color: #455459;
   font-size: 1.5vmin;
   width: 80vw;
   height: 2vh;
@@ -177,7 +155,7 @@ ul {
      object-fit: scale-down;
 }
 .carrousel .carrouselCollection .displayedImg {
-  border: 2px solid #4D5C63;
+  border: 2px solid #455459;
   max-height: 5vh;
   max-width: 5vh;
 }
@@ -233,7 +211,7 @@ ul {
   box-shadow: inset 0 0 10px 7px #D6D5D3;
 }
 .portfolioContainer .portfolioCarrousel .carInfo {
-  color: #4D5C63;
+  color: #455459;
   font-size: 2vmin;
   width: 40vw;
   height: 2vh;
@@ -302,7 +280,7 @@ ul {
      object-fit: scale-down;
 }
 .portfolioContainer .portfolioCarrousel .carrouselCollection .displayedImg {
-  border: 2px solid #4D5C63;
+  border: 2px solid #455459;
   max-height: 5vh;
   max-width: 5vh;
 }
@@ -361,20 +339,24 @@ ul {
 
 footer {
   display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  padding-top: 1rem;
+  justify-content: flex-end;
+  border-top: #e0e0e0 solid 1px;
+}
+footer #footerText {
+  display: flex;
   flex-direction: column;
-  margin: 10px;
-  margin-top: 2.5vh;
-  background: #D6D5D3;
-  padding: 10px;
-  border-radius: 10px;
+  justify-content: center;
 }
-footer .contactUs {
-  margin: 0;
+footer #footerText p {
+  margin: 0.2em;
 }
-footer .collab {
-  margin: 0;
+footer .logoRegarde {
+  margin-left: auto;
 }
-footer .collab .logoRegarde {
-  height: 6vh;
-  vertical-align: middle;
+footer .logoRegarde img {
+  filter: brightness(0) invert(1);
+  height: 6em;
 }/*# sourceMappingURL=main.css.map */

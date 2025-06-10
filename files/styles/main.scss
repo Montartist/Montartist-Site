@@ -1,4 +1,4 @@
-$primary: #4D5C63;
+$primary: #455459;
 $secondary: #859A9D;
 $accent: #D6D5D3;
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
@@ -9,26 +9,32 @@ body {
     font-family: Cambria, Arial;
     margin: 0;
     background: $primary;
+    color: #ffffff;
+    font-size: 10px;
 }
 main {
-    width: 99.2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 2vh;
+    font-size: 1.5rem;
     background: $primary;
 }
-ul {
-    list-style-type: disc;
-}
 
-.header {
-    height: 50vh;
-    background-image: url(../assets/images/utils/le_mont_artiste.jpg);
-    background-size: cover;
-    background-position: top;
-    position: relative;
-    .links {
+#header {
+    @media screen and (max-width: 1200px) {
+        background-image: url(../assets/images/utils/le_mont_artiste.jpg);
+        background-size: cover;
+        background-position: top center;
+        height: 50vh;
+    }
+    @media screen and (min-width: 1200px) {
+        background-image: url(../assets/images/utils/homePageImg.jpg);
+        background-size: cover;
+        background-position: top center;
+        height: 60vh;
+    }
+    
+    .hlinks {
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -36,7 +42,7 @@ ul {
         margin: 0;
         padding: 0;
 
-        .link {
+        .hlink {
             text-decoration: none;
             color: black;
             cursor: pointer;
@@ -44,7 +50,7 @@ ul {
             padding-bottom: 3vh;
             padding-right: 20px;
         }
-        #bHome {
+        #hHome {
             margin-right: auto;
             margin-left: 0;
             padding-left: 20px;
@@ -52,56 +58,24 @@ ul {
     }
 }
 
-#hPageHeader {
-    background-image: none; 
-}
-
-.hPage {
-    .montartistImg {
-        img {
-            max-width: 100%;
-        }
+#aboutUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em 10em;
+    h2 {
+        width: 70%;
+        padding-bottom: 1em;
+        border-bottom: #ffffff solid 2px;
+        text-align: center;
+        margin-top: 0;
     }
-    .imgSection {
-        width: 80vw;
-        height: 80vh;
-        margin: 2.5vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: url(../assets/images/utils/homePageImg.jpg) center;
-        background-size: cover;
-        border: 1px solid $accent;
-        border-radius: 7px;
-        .gen-title {    
-            margin: 0;
-            padding: 0;
-            padding-top: 10vmax;
-            text-align: center;
-            font-size: 10vw;
-            color: $primary;
-            font-family: "GFS Didot", Arial;
-        }
+    p {
+        text-align: justify;
     }
-    .hPageCarrousel {
-        margin: 5vh;
-    }
-    .aboutUs {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 2.5vh;
-        width: 80vw;
-        background: $secondary;
-        border: 1px solid $accent;
-        border-radius: 7px;
-        :nth-child(n) {
-            margin: 1vmin;
-        }
-        .aboutUsResp {
-            text-align: end;
-            align-self: self-end;
-        }
+    #aboutUsResp {
+        text-align: end;
+        align-self: self-end;
     }
 }
 
@@ -360,20 +334,25 @@ ul {
 
 footer {
     display: flex;
-    flex-direction: column;
-    margin: 10px;
-    margin-top: 2.5vh;
-    background: $accent;
-    padding: 10px;
-    border-radius: 10px;
-    .contactUs {
-        margin: 0;
-    }
-    .collab {
-        margin: 0;
-        .logoRegarde {
-            height: 6vh;
-            vertical-align: middle;
+    flex-direction: row;
+    margin: 1rem;
+    padding-top: 1rem;
+    justify-content: flex-end;
+
+    border-top: #e0e0e0 solid 1px;
+    #footerText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            margin: 0.2em;
         }
+    }
+    .logoRegarde {
+        img {
+            filter: brightness(0) invert(1);
+            height: 6em;
+        }
+        margin-left: auto;
     }
 }
