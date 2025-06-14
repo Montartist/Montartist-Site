@@ -10,27 +10,16 @@ async function carrousel(carrouselObj, imgList, useCase) {
 	var carrouselCollection = carrouselObj.querySelector('.carrouselCollection')
 	
 	carrouselCollection.innerHTML = ''
-	for (var i of imgList) {
+	for (let i = 0; i<imgList.length; i++) {
+		var div = document.createElement('div')
+		div.setAttribute("class", "collection-img-container")
+		carrouselCollection.appendChild(div)
 		var img = document.createElement('img')
 		img.setAttribute("alt", "")
-		carrouselCollection.appendChild(img)
+		div.appendChild(img)
 	}
 
 	setImg(imgId, imgList, carrouselObj,useCase)
-
-	function bigPicture(img,existingClass) {
-		img.setAttribute('class', ' bigPicture')
-		img.removeEventListener('click', bigPicture)
-		img.addEventListener('click', function () {noBigPicture(img, existingClass); })
-	}
-	function noBigPicture(img, existingClass) {
-		img.setAttribute('class', existingClass)
-		img.removeEventListener('click', noBigPicture)
-		img.addEventListener('click', function () {bigPicture(img, existingClass); })
-	}
-
-	var carImg = carrouselObj.children[2]
-	carImg.addEventListener('click', function () {bigPicture(carImg, carImg.className); })	
 	
 	for (var i = 0; i < carrouselCollection.children.length; i++) {
 		if (useCase == 'concours') {
@@ -43,7 +32,7 @@ async function carrousel(carrouselObj, imgList, useCase) {
 			}
 			carrouselCollection.children[i].setAttribute('src', `file:///home/lilguy/code/Montartist-Site${location.hostname}/files/assets/images/oeuvres/portfolios/${artist}/oeuvres/${imgList[i][1]}`)
 		} else if (useCase == "hpage") {
-			carrouselCollection.children[i].setAttribute('src', `file:///home/lilguy/code/Montartist-Site${location.hostname}/files/assets/images/oeuvres/portfolios/${imgList[i][3]}/oeuvres/${imgList[i][1]}`)
+			carrouselCollection.children[i].children[0].setAttribute('src', `file:///home/lilguy/code/Montartist-Site${location.hostname}/files/assets/images/oeuvres/portfolios/${imgList[i][3]}/oeuvres/${imgList[i][1]}`)
 		}
 
 		carrouselCollection.children[i].addEventListener('click', function () {
@@ -79,7 +68,7 @@ async function carrousel(carrouselObj, imgList, useCase) {
 function setImg(imgId, imgList, carrousel, useCase) {
 	var carInfo = carrousel.children[0]
 	var carrouselImg = carrousel.querySelector('.carrousel-img-container').children[0]
-	var imgAct = imgAct = imgList[imgId]
+	var imgAct = imgList[imgId]
 	if (useCase == "concours") {
 		carInfo.innerHTML = `<li>Nom : ${imgAct.name}</li><li>Artiste : ${imgAct.artiste}</li><li>Sélectionnée : ${{false : "non", true : "oui"}[imgAct['sélectionné']]}</li>`
 		carrouselImg.setAttribute('src', imgAct.file)
