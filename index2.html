@@ -9,10 +9,22 @@
     <body>
         <header id="header" class="">
             <nav class="navbar">
-                <ul class="hlinks">
-                    <li id='hHome' class="hlink"><a class="hlink" href="">MONTARTIST</a></li>
-                    <li class="hlink"><img src="files/assets/images/utils/bars.svg"></li>
-                </ul>
+                <div class="hlinks">
+                    <input type="checkbox" id="sidebar-active">
+                    <div id='hHome' class="">
+                        <a class="hlink" class="" href="">MONTARTIST</a>
+                    </div>
+                    <label id="overlay" for="sidebar-active"></label>
+                    <label id="hBars" class="open-sidebar-button" for="sidebar-active"><img src="files/assets/images/utils/bars.svg"></label>
+                    <div class="links-container">
+                        <label for="sidebar-active" class="close-sidebar-button">
+                            <img src="files/assets/images/utils/close.svg">
+                        </label>
+                        <a class="links-container-link" href="#">HOME</a>
+                        <a class="links-container-link" href="#">PORTFOLIOS</a>
+                        <a class="links-container-link" href="#">CONCOURS</a>
+                    </div>
+                </div>
             </nav>
             <div class="title-container">
                 <h1>MONTARTIST</h1>
