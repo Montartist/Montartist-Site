@@ -7,27 +7,52 @@
         <link rel="shortcut icon" href="files/assets/images/utils/fav.ico" type="image/x-icon">
     </head>
     <body>
-        <header id="hPageHeader" class="HHEADER HEADER">
-            <ul class="links">
-                <li id='bHome' class="link"><a class="link" href="">MONTARTIST</a></li>
-                <li class="link"><a class="link" href="">HOME</a></li>
-                <li class="link" id="concours" tabindex="0">
-                    CONCOURS
-                </li>
-                <li id="portfolio" class="link" tabindex="0">
-                    PORTFOLIO
-                </li>
-            </ul>
+        <header id="headerhome" class="header">
+            <nav class="navbar">
+                <div class="hlinks">
+                    <input type="checkbox" id="sidebar-active">
+                    <div id='hHome' class="">
+                        <a class="hlink" id="hHomea" class="" href="/">MONTARTIST</a>
+                    </div>
+                    <label id="overlay" for="sidebar-active"></label>
+                    <label id="hBars" class="open-sidebar-button" for="sidebar-active"><img src="/files/assets/images/utils/bars.svg"></label>
+                    <div class="links-container">
+                        <label for="sidebar-active" class="close-sidebar-button">
+                            <img src="/files/assets/images/utils/close.svg">
+                        </label>
+                        <a class="links-container-link" href="/">HOME</a>
+                        <a class="links-container-link" href="/Portfolio/">PORTFOLIOS</a>
+                        <a class="links-container-link" href="#">CONCOURS</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="htitle">
+                <div class="title-container">
+                    <h1>MONTARTIST</h1>
+                </div>
+            </div>
         </header>
-        
-        <main class="hPage">
-            <section class="imgSection">
-                <h1 class="gen-title">Montartist</h1>
+
+        <main class="">
+            <section class="carrousel hPageCarrousel">
+                <ul class="carInfo"></ul>
+                <div class="carrousel-viewer">
+                    <button class="carrouselL carrouselButton">
+                        <img src="files/assets/images/utils/left.svg" alt="Bouton gauche">
+                    </button>
+                    <div class="carrousel-img-container">
+                        <img fetchpriority="high" class="carrouselImg" src="" alt="Image de carrousel de la page d'accueil"/>
+                    </div>
+                    <button class="carrouselR carrouselButton">
+                        <img src="files/assets/images/utils/right.svg" alt="Bouton Droit">
+                    </button>
+                </div>
+                <div class="carrouselCollection"></div>
             </section>
-            <section class="carrousel hPageCarrousel"><ul class="carInfo"></ul><button class="carrouselL carrouselButton"><img src="../../files/assets/images/utils/left.svg" alt="Bouton gauche"></button><img fetchpriority="high" class="carrouselImg" src="" alt="Image de carrousel de la page d'accueil"/><button class="carrouselR carrouselButton"><img src="../../files/assets/images/utils/right.svg" alt="Bouton Droit"></button><div class="carrouselCollection"></div></section>
-            <section class="aboutUs">
-                <h2 class="aboutUsTitle">Qui sommes nous ?</h2>
-                <p class="aboutUsText">
+            
+            <section id="aboutUs">
+                <h2 id="aboutUsTitle">Qui sommes nous ?</h2>
+                <p id="aboutUsText">
                     Créé par une vingtaine d’élève du lycée Montalembert (2nde, 1ère et Terminale) pratiquant des activités artistiques, le projet Montartist favorise la création et le travail collaboratif.
                     <br/>
                     <br/>
@@ -36,7 +61,7 @@
                     <br/>
                     En groupe ou de manière autonome, les élèves s’initient à la gestion de projet, aux outils numériques, et à l’élaboration de la communication. Ils créent l’ensemble des documents et des supports nécessaires au projet et chaque pôle (créatif, numérique, communication, support) est géré par un élève responsable de son domaine.
                 </p>
-                <p class="aboutUsResp">
+                <p id="aboutUsResp">
                     <br/>
                     Responsable du projet : Célia Rousseau
                 </p>
@@ -44,9 +69,13 @@
         </main>
 
         <footer>
-            <p class="contactUs">Nous contacter : <a href="mailto:contact@montartist.net">contact@montartist.net</a></p>
-            <p class="collab">Ce site web a été réalisé en collaboration avec l'association <strong>Regarde !</strong>. <img class="logoRegarde" src="https://www.montartist.net/files/assets/images/utils/logoRegarde.png" alt="Logo Regarde !"></p>
+            <div id="footerText">
+                <p class="contactUs">Nous contacter : <a href="mailto:contact@montartist.net">contact@montartist.net</a></p>
+                <p class="collab">Ce site web a été réalisé en collaboration avec l'association <strong>Regarde !</strong></p>
+            </div>
+            <div class="logoRegarde"><img class="" src="files/assets/images/utils/logoRegarde.svg" alt="Logo Regarde !"></div>
         </footer>
     </body>
-    <script type="module" src="files/scripts/main.js"></script>
+    <script src="./files/scripts/config.js"></script>
+    <script type="module" src="./files/scripts/main.js"></script>
 </html>

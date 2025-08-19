@@ -1,9 +1,10 @@
 import * as dataLoad from './dataLoad.js'
 import * as carrousel from './carrousel.js'
+import * as portfolioBuilder from './portfolioBuilder.js'
 
 //Carrousel for Home Page
-if (document.URL == `https://${location.hostname}/` || document.URL ==  'file:///home/lilguy/code/Montartist-Site/index2.html') {
-    carrousel.carrousel(document.querySelector(".carrousel"), await dataLoad.createHPageImageList(`file:///home/lilguy/code/Montartist-Site/files/data/portfolio.json`), "hpage")
+if (window.location.pathname === "/") {
+    carrousel.carrousel(document.querySelector(".carrousel"), await dataLoad.createHPageImageList(`/files/data/portfolio.json`), "hpage")
 }
 
 //Carrousel for participants page
