@@ -19,13 +19,8 @@ main {
   background: #455459;
 }
 
-#header {
-  font-size: 1.3rem;
-  display: flex;
-  flex-direction: column;
-}
 @media (max-width: 1200px) {
-  #header {
+  #headerhome {
     background-image: url(../assets/images/utils/le_mont_artiste.jpg);
     background-size: cover;
     background-position: top center;
@@ -33,38 +28,55 @@ main {
   }
 }
 @media (min-width: 1200px) {
-  #header {
+  #headerhome {
     background-image: url(../assets/images/utils/homePageImg.jpg);
     background-size: cover;
     background-position: top center;
     height: 80vh;
   }
+  #headerhome a {
+    color: black;
+  }
 }
-#header a {
-  text-decoration: none;
+#headerhome #hHomea {
   color: black;
+}
+#headerhome .open-sidebar-button {
+  filter: brightness(0);
+}
+
+.header {
+  font-size: 1.3rem;
+  background-color: #859A9D;
+  display: flex;
+  flex-direction: column;
+}
+.header a {
+  text-decoration: none;
+  color: white;
   padding: auto;
   height: auto;
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
-#header .navbar {
+.header .navbar {
   display: flex;
   height: 10vh;
+  justify-content: flex-start;
 }
-#header .navbar .hlinks {
+.header .navbar .hlinks {
   height: 100%;
   width: 100%;
   display: flex;
 }
-#header .navbar .hlinks #hHome {
+.header .navbar .hlinks #hHome {
   margin-right: auto;
   display: flex;
   align-items: center;
   padding-left: 2rem;
 }
-#header .links-container-link {
+.header .links-container-link {
   padding-right: 1rem;
   padding-left: 1rem;
   height: 100%;
@@ -72,45 +84,45 @@ main {
   align-items: center;
   height: 100%;
 }
-#header .open-sidebar-button {
-  filter: brightness(0);
+.header .open-sidebar-button {
+  filter: brightness(0) invert(1);
   display: none;
   height: 100%;
   cursor: pointer;
   display: none;
 }
-#header .open-sidebar-button img {
+.header .open-sidebar-button img {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#header .links-container {
+.header .links-container {
   height: 100%;
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
 }
-#header .links-container .close-sidebar-button {
+.header .links-container .close-sidebar-button {
   display: none;
   cursor: pointer;
 }
-#header .links-container .close-sidebar-button img {
+.header .links-container .close-sidebar-button img {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#header #sidebar-active {
+.header #sidebar-active {
   display: none;
 }
 @media (max-width: 1200px) {
-  #header #hHome {
+  .header #hHome {
     font-size: 3rem;
     padding-left: 3rem;
   }
-  #header .links-container {
+  .header .links-container {
     flex-direction: column;
     align-items: start;
     display: flex;
@@ -123,7 +135,7 @@ main {
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
     transition: 0.25s ease-out;
   }
-  #header .links-container .links-container-link {
+  .header .links-container .links-container-link {
     display: block;
     font-size: 3rem;
     padding-left: 5rem;
@@ -132,19 +144,19 @@ main {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  #header .links-container .links-container-link:hover {
+  .header .links-container .links-container-link:hover {
     background-color: #859A9D;
     cursor: pointer;
   }
-  #header .hlinks {
+  .header .hlinks {
     align-items: center;
   }
-  #header .open-sidebar-button {
+  .header .open-sidebar-button {
     display: block;
     height: 3rem;
     margin-right: 3rem;
   }
-  #header .links-container .close-sidebar-button {
+  .header .links-container .close-sidebar-button {
     display: block;
     filter: brightness(0) invert(1);
     height: 5rem;
@@ -153,10 +165,10 @@ main {
     margin-bottom: 2rem;
     align-self: flex-end;
   }
-  #header #sidebar-active:checked ~ .links-container {
+  .header #sidebar-active:checked ~ .links-container {
     right: 0;
   }
-  #header #sidebar-active:checked ~ #overlay {
+  .header #sidebar-active:checked ~ #overlay {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -165,24 +177,29 @@ main {
     z-index: 9;
   }
 }
-#header .title-container {
+.header .htitle {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.header .htitle .title-container {
+  display: flex;
+  justify-content: center;
 }
 @media (max-width: 1200px) {
-  #header .title-container {
+  .header .htitle .title-container {
     justify-content: center;
     align-items: center;
   }
 }
 @media (min-width: 1200px) {
-  #header .title-container {
-    margin-top: 9rem;
+  .header .htitle .title-container {
+    margin-top: 3rem;
   }
 }
-#header .title-container h1 {
+.header .htitle .title-container h1 {
   font-size: 6rem;
   color: white;
   text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.8);

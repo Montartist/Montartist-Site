@@ -36,12 +36,6 @@ if (/Selectionnes/.test(document.URL)) {
 }
 
 //The portfolio
-// if (/Portfolio/.test(document.URL)) {
-//     var portfolioContainer = document.querySelector('.portfolioContainer')
-//     if (document.URL[document.URL.length-1] == '/') {
-//         var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10, document.URL.length-1)
-//     } else {
-//         var artist = document.URL.slice(document.URL.search(/Portfolio\//)+10)
-//     }
-//     portfolioBuilder.build(portfolioContainer,artist)
-// }
+if (/Portfolio/.test(document.URL)) {
+    portfolioBuilder.build(portfolioContainer,artist)
+}

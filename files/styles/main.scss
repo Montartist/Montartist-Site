@@ -22,7 +22,7 @@ main {
     background: $primary;
 }
 
-#header {
+#headerhome {
     @media (max-width: 1200px) {
         background-image: url(../assets/images/utils/le_mont_artiste.jpg);
         background-size: cover;
@@ -34,12 +34,23 @@ main {
         background-size: cover;
         background-position: top center;
         height: 80vh;
+        a {
+            color: black;
+        }
     }
+    #hHomea {color: black;}
+    .open-sidebar-button {
+            filter: brightness(0);
+    }
+}
+
+.header {
     font-size: 1.3rem;
+    background-color: $secondary;
 
     a {
         text-decoration: none;
-        color: black;
+        color: white;
         padding: auto;
         height: auto;
         width: 100%;
@@ -53,6 +64,7 @@ main {
     .navbar {
         display: flex;
         height: 10vh;
+        justify-content: flex-start;
         .hlinks {
             height: 100%;
             width: 100%;
@@ -76,7 +88,7 @@ main {
             
         }
     .open-sidebar-button {
-            filter: brightness(0);
+            filter: brightness(0) invert(1);
             display: none;
             height: 100%;
             cursor: pointer;
@@ -174,22 +186,27 @@ main {
             z-index: 9;
         } 
     }
-    .title-container {
+    .htitle {
         height: 100%;
         width: 100%;
         display: flex;
-        @media (max-width: 1200px) {
-            justify-content: center;
-            align-items: center;
-        }
-        @media (min-width: 1200px) {
-            margin-top: 9rem;
-        }
         justify-content: center;
-        h1 {
-            font-size: 6rem;
-            color: white;
-            text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.8);
+        align-items: center;
+        .title-container {
+            display: flex;
+            @media (max-width: 1200px) {
+                justify-content: center;
+                align-items: center;
+            }
+            @media (min-width: 1200px) {
+                margin-top: 3rem;
+            }
+            justify-content: center;
+            h1 {
+                font-size: 6rem;
+                color: white;
+                text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.8);
+            }
         }
     }
 }
