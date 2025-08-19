@@ -37,6 +37,6 @@ if (/Selectionnes/.test(document.URL)) {
 }
 
 //The portfolio
-if (/Portfolio/.test(document.URL)) {
-    portfolioBuilder.build(portfolioContainer,artist)
+if (window.location.pathname === "/Portfolio/") {
+    portfolioBuilder.build()
 }

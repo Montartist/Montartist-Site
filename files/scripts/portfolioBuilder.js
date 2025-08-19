@@ -1,16 +1,16 @@
 import * as dataLoad from './dataLoad.js'
 import * as carrousel from './carrousel.js'
 
-async function build(container, artist) {
-  let artists = await dataLoad.requestJSON(`../files/data/portfolio.json`);
-  let artistObj = artists[artist];
-  let artistContainer = document.querySelector(".portfolio-list");
+async function build() {
+  let artists = await dataLoad.requestJSON(`/files/data/portfolio.json`);
+  let artistsArray = Object.values(artists);
+  const portfolioList = document.querySelector('.portfolio-list');
 
-  artists.array.forEach(artist => {
+  artistsArray.forEach(artist => {
     const artistButton = document.createElement("button");
-    artistButton.textContent = artist;
-    artistButton.dataset.artist = artist;
-    artistContainer.appendChild(artistButton);
+    artistButton.textContent = artist["name"];
+    artistButton.dataset.artist = artist["name"];
+    portfolioList.appendChild(artistButton);
     
   });
 
