@@ -57,34 +57,54 @@ async function build() {
 function loadArtist(artist) {
   const portfolioName = document.querySelector('#portfolio-name');
   const carrouselCollection = document.querySelector('.carrouselCollection');
+  const carrouselButtonsLeft = document.querySelector('.carrouselL')
+	const carrouselButtonsRight = document.querySelector('.carrouselR')
   console.log(artist);
-  
-  const artistImgList = artist["oeuvres"];
   
   // INFOS
   portfolioName.textContent = artist["name"];
 
   //CARROUSEL
-  for (let i = 0; i<artistImgList.length; i++) {
+  let imgId = 0
+  carrouselCollection.innerHTML = "";
+  for (let i = 0; i<artist["oeuvres"].length; i++) {
 		let div = document.createElement('div');
 		div.setAttribute("class", "collectionImg");
 		carrouselCollection.appendChild(div);
 
 		let img = document.createElement('img');
-		img.setAttribute('src', `/files/assets/images/oeuvres/portfolios/${artist["folderName"]}/oeuvres/${artistImgList[i][1]}`);
+		img.setAttribute('src', `/files/assets/images/oeuvres/portfolios/${artist["folderName"]}/oeuvres/${artist["oeuvres"][i][1]}`);
 		div.appendChild(img);
 
     div.addEventListener('click', () => {
       setImgPortfolio(i, artist);
     });
 	};
+
+  carrouselButtonsLeft.addEventListener('click', () => {
+  imgId == 0 ? imgId = artist["oeuvres"].length-1 : imgId -= 1;
+    setImgPortfolio(imgId, artist);
+  });
+
+  carrouselButtonsRight.addEventListener('click', () => {
+    imgId == artist["oeuvres"].length-1 ? imgId = 0 : imgId += 1;
+    setImgPortfolio(imgId, artist);
+  });
+
   setImgPortfolio(0, artist)
 
 };
-function setImgPortfolio(ImgId, artist) {
+function setImgPortfolio(imgId, artist) {
+  const carrouselImgPortfolioTitle = document.querySelector('.carrousel-title').children[0];
   const carrouselImgPortfolio = document.querySelector('.carrousel-img-container').children[0];
-  carrouselImgPortfolio.setAttribute('src', `/files/assets/images/oeuvres/portfolios/${artist["folderName"]}/oeuvres/${artist["oeuvres"][ImgId][1]}`);
+  const previous = document.querySelector('.displayedImg');
 
+  carrouselImgPortfolioTitle.innerHTML = artist["oeuvres"][imgId][0];
+  carrouselImgPortfolio.setAttribute('src', `/files/assets/images/oeuvres/portfolios/${artist["folderName"]}/oeuvres/${artist["oeuvres"][imgId][1]}`);
+  
+  if (previous) previous.classList.remove('displayedImg')
+	
+  document.querySelector('.carrouselCollection').children[imgId].setAttribute('class', 'collectionImg displayedImg');
 };
 
 export {build, loadArtist, setImgPortfolio}
