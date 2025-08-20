@@ -69,18 +69,7 @@ function setImg(imgId, imgList, carrousel, useCase) {
 	let carInfo = carrousel.children[0]
 	let carrouselImg = carrousel.querySelector('.carrousel-img-container').children[0]
 	let imgAct = imgList[imgId]
-	if (useCase == "concours") {
-		carInfo.innerHTML = `<li>Nom : ${imgAct.name}</li><li>Artiste : ${imgAct.artiste}</li><li>Sélectionnée : ${{false : "non", true : "oui"}[imgAct['sélectionné']]}</li>`
-		carrouselImg.setAttribute('src', imgAct.file)
-	} else if (useCase == 'portfolio') {
-		if (document.URL[document.URL.length-1] == '/') {
-			let artist = document.URL.slice(document.URL.search(/Portfolio\//)+10, document.URL.length-1)
-		} else {
-			let artist = document.URL.slice(document.URL.search(/Portfolio\//)+10)
-		}
-		carInfo.innerHTML = `<li>${imgAct[0]}</li>`
-		carrouselImg.setAttribute('src', `./files/assets/images/oeuvres/portfolios/${artist}/oeuvres/${imgAct[1]}`)
-	} else if (useCase == "hpage") {
+	if (useCase == "hpage") {
 		carInfo.innerHTML = `<li>Nom : ${imgAct[0]}</li><li>Artiste : ${imgAct[2]}</li>`
 		carrouselImg.setAttribute('src', `./files/assets/images/oeuvres/portfolios/${imgAct[3]}/oeuvres/${imgAct[1]}`)
 	}
