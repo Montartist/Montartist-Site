@@ -1,18 +1,24 @@
 import * as dataLoad from './dataLoad.js'
-import * as carrousel from './carrousel.js'
+
+let artistsArray = []
 
 async function build() {
   let artists = await dataLoad.requestJSON(`/files/data/portfolio.json`);
-  let artistsArray = Object.values(artists);
+  artistsArray = Object.values(artists);
   const portfolioList = document.querySelector('.portfolio-list');
 
   artistsArray.forEach(artist => {
     const artistButton = document.createElement("button");
     artistButton.textContent = artist["name"];
     artistButton.dataset.artist = artist["name"];
+    artistButton.addEventListener("click", () => {
+      loadArtist(artist);
+    });
     portfolioList.appendChild(artistButton);
     
   });
+
+  loadArtist(artistsArray[0]);
 
   // let portfolioElementList = {}
 
@@ -46,6 +52,39 @@ async function build() {
   //   container.appendChild(portfolioElementList[element])
   // }
   // carrousel.carrousel(portfolioElementList.carrousel, artistObj.oeuvres, 'portfolio')
-}
+};
 
-export {build}
+function loadArtist(artist) {
+  const portfolioName = document.querySelector('#portfolio-name');
+  const carrouselCollection = document.querySelector('.carrouselCollection');
+  console.log(artist);
+  
+  const artistImgList = artist["oeuvres"];
+  
+  // INFOS
+  portfolioName.textContent = artist["name"];
+
+  //CARROUSEL
+  for (let i = 0; i<artistImgList.length; i++) {
+		let div = document.createElement('div');
+		div.setAttribute("class", "collectionImg");
+		carrouselCollection.appendChild(div);
+
+		let img = document.createElement('img');
+		img.setAttribute('src', `/files/assets/images/oeuvres/portfolios/${artist["folderName"]}/oeuvres/${artistImgList[i][1]}`);
+		div.appendChild(img);
+
+    div.addEventListener('click', () => {
+      setImgPortfolio(i, artist);
+    });
+	};
+  setImgPortfolio(0, artist)
+
+};
+function setImgPortfolio(ImgId, artist) {
+  const carrouselImgPortfolio = document.querySelector('.carrousel-img-container').children[0];
+  carrouselImgPortfolio.setAttribute('src', `/files/assets/images/oeuvres/portfolios/${artist["folderName"]}/oeuvres/${artist["oeuvres"][ImgId][1]}`);
+
+};
+
+export {build, loadArtist, setImgPortfolio}
