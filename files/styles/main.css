@@ -327,6 +327,10 @@ main {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.carrousel .carrousel-title {
+  display: flex;
+  justify-content: center;
+}
 
 .Selector {
   display: flex;
@@ -349,160 +353,94 @@ main {
   background: #D6D5D3;
 }
 
-.portfolioContainer {
+#carrousel-portfolio {
+  margin: 0;
+}
+
+.portfolio-list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  margin-top: 1rem;
+  width: 100%;
+  height: 10vh;
+  justify-content: center;
+}
+.portfolio-list button {
+  flex: 1;
+  background-color: #859A9D;
+  border: 2px solid #859A9D;
+  padding: 0.6em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.portfolio-list button:hover {
+  background-color: #D6D5D3;
+  color: #455459;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.portfolio-list button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.portfolio-desc {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 7rem;
+}
+@media (max-width: 1200px) {
+  .portfolio-desc {
+    display: block;
+  }
+  .portfolio-desc .portfolio-desc-autoportrait {
+    float: left;
+    width: 20vw;
+    max-height: none;
+    height: auto;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 0.1em;
+  }
+  .portfolio-desc .portfolio-desc-text {
+    margin-left: 2rem;
+  }
+}
+.portfolio-desc .portfolio-desc-autoportrait {
+  flex: 0 0 30%;
+}
+@media (min-width: 1200px) {
+  .portfolio-desc .portfolio-desc-autoportrait {
+    max-width: 20vw;
+    margin: 0 2rem 0 2rem;
+  }
+  .portfolio-desc .portfolio-desc-autoportrait img {
+    height: auto;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (max-width: 1200px) {
+  .portfolio-desc .portfolio-desc-autoportrait img {
+    height: 100%;
+    max-width: 100%;
+  }
+}
+.portfolio-desc .portfolio-desc-text {
+  margin-right: auto;
+}
+.portfolio-desc .portfolio-desc-text p {
+  text-align: justify;
+  margin: 0 2rem 0 0;
+}
+.portfolio-desc .portfolio-desc-text .portfolio-desc-text-contact {
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 85vw;
-  border-radius: 7px;
-  background-color: #859A9D;
-  border: 1px solid #D6D5D3;
-}
-.portfolioContainer .portfolioTitle {
-  height: 5vh;
-  width: 100%;
-  margin: 1vmin;
-  text-align: center;
-}
-.portfolioContainer .portfolioCarrousel {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 40vh;
-  width: 40vw;
-  border: 1px solid #D6D5D3;
-  border-radius: 7px;
-  margin: 1vmin;
-  background: #859A9D;
-  box-shadow: inset 0 0 10px 7px #D6D5D3;
-}
-.portfolioContainer .portfolioCarrousel .carInfo {
-  color: #455459;
-  font-size: 2vmin;
-  width: 40vw;
-  height: 2vh;
-  margin: 0;
-  display: flex;
-  list-style-type: none;
-  justify-content: space-around;
-  padding: 0;
-  background: #D6D5D3;
-  border-radius: 7px;
-  padding: 3px;
-}
-.portfolioContainer .portfolioCarrousel .carrouselButton {
-  border: none;
-  background: #D6D5D3;
-  border-radius: 50%;
-  width: 2.5vw;
-  height: 2.5vw;
-  margin: 10px;
-  padding: 0;
-  align-self: center;
-}
-.portfolioContainer .portfolioCarrousel .carrouselButton :nth-child(n) {
-  width: 2.5vw;
-}
-.portfolioContainer .portfolioCarrousel .carrouselImg {
-  display: block;
-  max-height: 28vh;
-  max-width: 30vw;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.portfolioContainer .portfolioCarrousel .bigPicture {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: auto;
-  height: 100vh;
-  width: 100vw;
-  -o-object-fit: contain;
-     object-fit: contain;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.portfolioContainer .portfolioCarrousel .carrouselCollection {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 40vw;
-  height: 6vh;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0.5vmin;
-  align-self: flex-end;
-  background: #D6D5D3;
-  border-radius: 7px;
-}
-.portfolioContainer .portfolioCarrousel .carrouselCollection .collectionImg {
-  display: block;
-  height: 3vh;
-  width: 3vh;
-  margin: 0.5vmin;
-  margin-top: 10px;
-  margin-bottom: 0;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-}
-.portfolioContainer .portfolioCarrousel .carrouselCollection .displayedImg {
-  border: 2px solid #455459;
-  max-height: 5vh;
-  max-width: 5vh;
-}
-.portfolioContainer .portfolioIntent {
-  height: 38vh;
-  width: 38vw;
-  margin: 1vmin;
-  padding: 1vmin;
-  background: #D6D5D3;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: #859A9D #D6D5D3;
-  border-radius: 5px;
-  border: 1px solid #D6D5D3;
-}
-.portfolioContainer .portfolioXArts {
-  height: 40vh;
-  width: 40vw;
-  margin: 1vmin;
-  border: 1px solid #D6D5D3;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 5px;
-  box-shadow: inset 0 0 10px 7px #D6D5D3;
-}
-.portfolioContainer .portfolioXArts .xArtsImg {
-  -o-object-fit: contain;
-     object-fit: contain;
-  max-width: 40vw;
-  max-height: 37vh;
-  margin: 0;
-}
-.portfolioContainer .portfolioXArts .xArtsCaption {
-  background: #D6D5D3;
-  font-size: 1.8vmin;
-  text-align: center;
-  height: 3vh;
-  padding: 0;
-  margin: 0;
-  border-radius: 5px;
-}
-.portfolioContainer .portfolioXArts .xArtsCaption .xArtsTitle {
-  font-style: italic;
-}
-.portfolioContainer .portfolioAutoportrait {
-  max-width: 40vw;
-  max-height: 40vh;
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin: 1vmin;
-  background: #D6D5D3;
-  border-radius: 5px;
-  border: 1px solid #D6D5D3;
+  margin-left: auto;
+  margin-top: 2rem;
 }
 
 footer {

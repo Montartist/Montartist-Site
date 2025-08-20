@@ -56,15 +56,19 @@ async function build() {
 
 function loadArtist(artist) {
   const portfolioName = document.querySelector('#portfolio-name');
+  const portfolioDescAutoportrait = document.querySelector('.portfolio-desc-autoportrait').children[0];
+  const portfolioDescText = document.querySelector('.portfolio-desc-text').children[0];
+  const portfolioDescTextContact = document.querySelector('.portfolio-desc-text-contact');
+
   const carrouselCollection = document.querySelector('.carrouselCollection');
   const carrouselButtonsLeft = document.querySelector('.carrouselL')
 	const carrouselButtonsRight = document.querySelector('.carrouselR')
   console.log(artist);
   
-  // INFOS
+  // TITLE
   portfolioName.textContent = artist["name"];
 
-  //CARROUSEL
+  // CARROUSEL
   let imgId = 0
   carrouselCollection.innerHTML = "";
   for (let i = 0; i<artist["oeuvres"].length; i++) {
@@ -92,6 +96,11 @@ function loadArtist(artist) {
   });
 
   setImgPortfolio(0, artist)
+
+  // INFOS
+  portfolioDescText.innerHTML = artist["intention"];
+  portfolioDescTextContact.innerHTML = `Me contacter : ${artist["mail"]}`;
+  portfolioDescAutoportrait.setAttribute('src', `/files/assets/images/oeuvres/portfolios/${artist["folderName"]}/${artist["autoportrait"]}`);
 
 };
 function setImgPortfolio(imgId, artist) {

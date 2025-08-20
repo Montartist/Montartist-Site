@@ -327,6 +327,10 @@ main {
             }
         }
     }
+    .carrousel-title {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .Selector {
@@ -350,152 +354,95 @@ main {
     }
 }
 
-.portfolioContainer {
+#carrousel-portfolio {
+    margin: 0;
+}
+
+.portfolio-list {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: fit-content;
-    max-width: 85vw;
-    border-radius: 7px;
-    background-color: $secondary;
-    border: 1px solid $accent;
-    .portfolioTitle {
-        height: 5vh;
-        width: 100%;
-        margin: 1vmin;
-        text-align: center;
-    }
-    .portfolioCarrousel {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        height: 40vh;
-        width: 40vw;
-        border: 1px solid $accent;
-        border-radius: 7px;
-        margin: 1vmin;
-        background: $secondary;
-        box-shadow: inset 0 0 10px 7px $accent;
-        .carInfo {
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    width: 100%;
+    height: 10vh;
+    justify-content: center;
+
+    button {
+        flex: 1;
+        background-color: $secondary;
+        border: 2px solid $secondary;
+        padding: 0.6em 1.5em;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        
+        &:hover {
+            background-color: $accent;
             color: $primary;
-            font-size: 2vmin;
-            width: 40vw;
-            height: 2vh;
-            margin: 0;
-            display: flex;
-            list-style-type: none;
-            justify-content: space-around;
-            padding: 0;
-            background: $accent;
-            border-radius: 7px;
-            padding: 3px;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.15);
         }
-        .carrouselButton {
-            border: none;
-            background: $accent;
-            border-radius: 50%;
-            width: 2.5vw;
-            height: 2.5vw;
-            margin: 10px;
-            padding: 0;
-            align-self: center;
-            :nth-child(n) {
-                width: 2.5vw;
+
+        &:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    }
+    @media (min-width: 1200px) {
+    }
+    @media (max-width: 1200px) {
+    }
+}
+
+.portfolio-desc {
+    @media (max-width: 1200px) {
+        display: block;
+        .portfolio-desc-autoportrait {
+            float: left;
+            width: 20vw;
+            max-height: none;
+            height: auto;
+            margin-right: 2rem;
+            margin-left: 2rem;
+            margin-top: 0.1em;
+        }
+        .portfolio-desc-text {
+            margin-left: 2rem;
+        }
+    }
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7rem;
+    .portfolio-desc-autoportrait {
+        flex: 0 0 30%;
+        @media (min-width: 1200px) {
+            max-width: 20vw;
+            margin: 0 2rem 0 2rem;
+            img {
+                height: auto;
+                width: 100%;
+                object-fit: contain;
             }
         }
-        .carrouselImg {
-            display: block;
-            max-height: 28vh;
-            max-width: 30vw;
-            object-fit: contain;
-        }
-        .bigPicture {
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: auto;
-            height: 100vh;
-            width: 100vw;
-            object-fit: contain;
-            background-color: rgba($color: #000000, $alpha: 0.7);
-        }
-        .carrouselCollection {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 40vw;
-            height: 6vh;
-            height: fit-content;
-            padding: 0.5vmin;
-            align-self: flex-end;
-            background: $accent;
-            border-radius: 7px;
-            .collectionImg {
-                display: block;
-                height: 3vh;
-                width: 3vh;
-                margin: 0.5vmin;
-                margin-top: 10px;
-                margin-bottom: 0;
-                object-fit: scale-down;
-            }
-            .displayedImg {
-                border: 2px solid $primary;
-                max-height: 5vh;
-                max-width: 5vh;
+        @media (max-width: 1200px) {
+            img {
+                height: 100%;
+                max-width: 100%;
             }
         }
     }
-    .portfolioIntent {
-        height: 38vh;
-        width: 38vw;
-        margin: 1vmin;
-        padding: 1vmin;
-        background: $accent;
-        overflow-y: scroll;
-        scrollbar-width: thin;
-        scrollbar-color: $secondary $accent;
-        border-radius: 5px;
-        border: 1px solid $accent;
-    }
-    .portfolioXArts {
-        height: 40vh;
-        width: 40vw;
-        margin: 1vmin;
-        border: 1px solid $accent;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 5px;
-        box-shadow: inset 0 0 10px 7px $accent;
-        .xArtsImg {
-            object-fit: contain;
-            max-width: 40vw;
-            max-height: 37vh;
-            margin: 0;
+    .portfolio-desc-text {
+        margin-right: auto;
+        p {
+            text-align: justify;
+            margin: 0 2rem 0 0;
         }
-        .xArtsCaption {
-            background: $accent;
-            font-size: 1.8vmin;
-            text-align: center;
-            height: 3vh;
-            padding: 0;
-            margin: 0;
-            border-radius: 5px;
-            .xArtsTitle {
-                font-style: italic;
-            }
+        .portfolio-desc-text-contact {
+            width: fit-content;
+            margin-left: auto;
+            margin-top: 2rem;
         }
-    }
-    .portfolioAutoportrait {
-        max-width: 40vw;
-        max-height: 40vh;
-        object-fit: contain;
-        margin: 1vmin;
-        background: $accent;
-        border-radius: 5px;
-        border: 1px solid $accent;
     }
 }
 
