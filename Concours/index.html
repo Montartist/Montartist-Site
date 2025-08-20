@@ -31,24 +31,24 @@
             <div class="concours-settings">
                 <div class="concours-settings-divider" id="divider1">
                     <label class="custom-checkbox">
-                        <input type="radio" name="option1" checked>
+                        <input type="radio" name="participants">
                         <span class="checkbox-label">Sélectionnés</span>
                         <span class="checkbox-overlay"></span>
                     </label>
                     <label class="custom-checkbox">
-                        <input type="radio" name="option1">
+                        <input type="radio" name="participants" id="participants" checked>
                         <span class="checkbox-label">Participants</span>
                         <span class="checkbox-overlay"></span>
                     </label>
                 </div>
                 <div class="concours-settings-divider" id="divider2">
                     <label class="custom-checkbox">
-                        <input type="checkbox" name="option1" checked>
+                        <input type="checkbox" name="numeriques" id="numeriques" checked>
                         <span class="checkbox-label">Numériques</span>
                         <span class="checkbox-overlay"></span>
                     </label>
                     <label class="custom-checkbox">
-                        <input type="checkbox" name="option1" checked>
+                        <input type="checkbox" name="traditionnelles" id="traditionnelles" checked>
                         <span class="checkbox-label">Traditionnelles</span>
                         <span class="checkbox-overlay"></span>
                     </label>
@@ -58,7 +58,7 @@
                 <ul class="carInfo">
                     <li>Nom :</li>
                     <li>Artiste :</li>
-                    <li>Selectionnée :</li>
+                    <li>Sélectionnée :</li>
                 </ul>
                 <div class="carrousel-title"><h1></h1></div>
                 <div class="carrousel-viewer">
@@ -72,16 +72,7 @@
                         <img src="/files/assets/images/utils/right.svg" alt="Bouton Droit">
                     </button>
                 </div>
-                <div class="carrouselCollection"></div>
-            </section>
-            <section class="portfolio-desc">
-                <div class="portfolio-desc-autoportrait">
-                    <img>
-                </div>
-                <div class="portfolio-desc-text">
-                    <p class=""></p>
-                    <p class="portfolio-desc-text-contact"></p>
-                </div>
+                <div class="carrouselCollection" id="carrousel-collection-concours"></div>
             </section>
         </main>
 

@@ -30,7 +30,6 @@ function loadArtist(artist) {
   const carrouselCollection = document.querySelector('.carrouselCollection');
   const carrouselButtonsLeft = document.querySelector('.carrouselL')
 	const carrouselButtonsRight = document.querySelector('.carrouselR')
-  console.log(artist);
   
   // TITLE
   document.title = `Portfolio de ${artist["name"]}`

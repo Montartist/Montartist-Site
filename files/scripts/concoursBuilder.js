@@ -2,58 +2,109 @@ import * as dataLoad from './dataLoad.js'
 
 async function build() {
     let data = await dataLoad.requestJSON(`/files/data/concours.json`);
-    console.log(data);
+    let dataArray = Object.values(data);
+    loadConcours(dataArray);    
 
-    
+    const numeriques = document.querySelector('#numeriques');
+    const traditionnelles = document.querySelector('#traditionnelles');
+
+    document.querySelectorAll('.custom-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('click', () => {
+            loadConcours(dataArray)
+        });
+    });
+
+    numeriques.addEventListener('change', (e) => {
+        if (!numeriques.checked && !traditionnelles.checked) {
+            e.target.checked = true;
+        }
+    })
+    traditionnelles.addEventListener('change', (e) => {
+        if (!numeriques.checked && !traditionnelles.checked) {
+            e.target.checked = true;
+        }
+    })
 };
 
-function getSelectedRadio() {
-    const radio = document.querySelector('input[name="option1"]:checked');
-    return radio ? radio.nextElementSibling.textContent.trim() : null;
-}
-function getCheckedCategories() {
-    const checked = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'));
-    return checked.map(cb => cb.nextElementSibling.textContent.trim());
-}
-
 function loadConcours(oeuvresList) {
+    const radio = document.querySelector('#participants').checked;
+    const numeriques = document.querySelector('#numeriques').checked;
+    const traditionnelles = document.querySelector('#traditionnelles').checked;
+    let currentOeuvresList = []
+
+    if (numeriques) {
+        oeuvresList[0].forEach(oeuvre => {
+            if (radio) {
+                currentOeuvresList.push(oeuvre);
+            } else if (oeuvre["sélectionné"] === true) {
+                currentOeuvresList.push(oeuvre);
+            };
+        });
+    };
+    if (traditionnelles) {
+        oeuvresList[1].forEach(oeuvre => {
+            if (radio) {
+                currentOeuvresList.push(oeuvre);
+            } else if (oeuvre["sélectionné"] === true) {
+                currentOeuvresList.push(oeuvre);
+            };
+        });
+    };
+
+    console.log(currentOeuvresList);
+
     const carrouselCollection = document.querySelector('.carrouselCollection');
     const carrouselButtonsLeft = document.querySelector('.carrouselL')
     const carrouselButtonsRight = document.querySelector('.carrouselR')
-    console.log(artist);
     
-    // TITLE
-    document.title = `Portfolio de ${artist["name"]}`
-    portfolioName.textContent = artist["name"];
 
     // CARROUSEL
     let imgId = 0
     carrouselCollection.innerHTML = "";
-    for (let i = 0; i<oeuvresList.length; i++) {
+    for (let i = 0; i<currentOeuvresList.length; i++) {
         let div = document.createElement('div');
         div.setAttribute("class", "collectionImg");
         carrouselCollection.appendChild(div);
 
         let img = document.createElement('img');
-        img.setAttribute('src', `/files/assets/images/oeuvres/portfolios/${artist["folderName"]}/oeuvres/${artist["oeuvres"][i][1]}`);
+        img.setAttribute('src', `/files/assets/images/oeuvres/concours/${currentOeuvresList[i]["file"]}`);
         div.appendChild(img);
 
     div.addEventListener('click', () => {
-        setImgPortfolio(i, artist);
+        setImgConcours(i, currentOeuvresList);
     });
     };
 
     carrouselButtonsLeft.addEventListener('click', () => {
-    imgId == 0 ? imgId = artist["oeuvres"].length-1 : imgId -= 1;
-    setImgPortfolio(imgId, artist);
+    imgId == 0 ? imgId = currentOeuvresList.length-1 : imgId -= 1;
+    setImgConcours(imgId, currentOeuvresList);
     });
 
     carrouselButtonsRight.addEventListener('click', () => {
-    imgId == artist["oeuvres"].length-1 ? imgId = 0 : imgId += 1;
-    setImgPortfolio(imgId, artist);
+    imgId == currentOeuvresList.length-1 ? imgId = 0 : imgId += 1;
+    setImgConcours(imgId, currentOeuvresList);
     });
 
-    setImgPortfolio(0, artist)
+    setImgConcours(0, currentOeuvresList)
 };
 
-export {build, loadConcours};
+function setImgConcours(imgId, currentOeuvresList) {
+    const carrouselImgConcours = document.querySelector('.carrouselImg');
+    const carrouselConcoursInfo = document.querySelector('.carInfo');
+    const previous = document.querySelector('.displayedImg');
+    
+    let selectionnee = ""
+    currentOeuvresList[imgId]["sélectionné"] ? selectionnee = "Oui" : selectionnee = "Non"
+
+    carrouselConcoursInfo.children[0].innerHTML = `Nom : ${currentOeuvresList[imgId]["name"]}`;
+    carrouselConcoursInfo.children[1].innerHTML = `Artiste : ${currentOeuvresList[imgId]["artiste"]}`;
+    carrouselConcoursInfo.children[2].innerHTML = `Sélectionnée : ${selectionnee}`;
+
+    carrouselImgConcours.setAttribute('src', `/files/assets/images/oeuvres/concours/${currentOeuvresList[imgId]["file"]}`);
+    
+    if (previous) previous.classList.remove('displayedImg')
+        
+    document.querySelector('.carrouselCollection').children[imgId].setAttribute('class', 'collectionImg displayedImg');
+};
+
+export {build, loadConcours, setImgConcours};
