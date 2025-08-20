@@ -389,10 +389,6 @@ main {
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
     }
-    @media (min-width: 1200px) {
-    }
-    @media (max-width: 1200px) {
-    }
 }
 
 .portfolio-desc {
@@ -445,6 +441,69 @@ main {
         }
     }
 }
+
+.concours-settings {
+    display: flex;
+    width: 100%;
+    @media (min-width: 1200px) {
+        height: 30vh;
+    }
+    @media (max-width: 1200px) {
+        height: 20vh;
+    }
+    margin-top: 1rem;
+    
+    .concours-settings-divider {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .custom-checkbox {
+            flex: 1;
+            position: relative; // permet à l'overlay d'être positionné par rapport à ce label
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: $secondary;
+            width: 100%;
+            box-sizing: border-box;
+
+            input {
+                z-index: 3;
+            }
+
+            .checkbox-overlay {
+                position: absolute; // couvre tout le label
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent; // overlay invisible
+            }
+
+            input:checked ~ .checkbox-overlay {
+                background-color: $accent;
+                z-index: 0;
+            }
+
+            .checkbox-label {
+                z-index: 1;
+            }
+        }
+        
+    }
+
+    #divider1 {
+        flex: 0 0 50%;
+    }
+    
+    #divider2 {
+        flex: 0 0 50%;
+    }
+}
+
 
 footer {
     display: flex;

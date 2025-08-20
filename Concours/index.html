@@ -28,11 +28,34 @@
             </nav>
         </header>
         <main>
-            <div class="portfolio-list" id="portfolio-list"></div>
-            <div class="portfolio-name-container">
-                <h1 id="portfolio-name"></h1>
+            <div class="concours-settings">
+                <div class="concours-settings-divider" id="divider1">
+                    <label class="custom-checkbox">
+                        <input type="radio" name="option1" checked>
+                        <span class="checkbox-label">Sélectionnés</span>
+                        <span class="checkbox-overlay"></span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="radio" name="option1">
+                        <span class="checkbox-label">Participants</span>
+                        <span class="checkbox-overlay"></span>
+                    </label>
+                </div>
+                <div class="concours-settings-divider" id="divider2">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="option1" checked>
+                        <span class="checkbox-label">Numériques</span>
+                        <span class="checkbox-overlay"></span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="option1" checked>
+                        <span class="checkbox-label">Traditionnelles</span>
+                        <span class="checkbox-overlay"></span>
+                    </label>
+                </div>
             </div>
-            <section class="carrousel hPageCarrousel" id="carrousel-portfolio">
+            <section class="carrousel hPageCarrousel" id="carrousel-concours">
+                <ul class="carInfo"></ul>
                 <div class="carrousel-title"><h1></h1></div>
                 <div class="carrousel-viewer">
                     <button class="carrouselL carrouselButton">
