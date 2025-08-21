@@ -98,6 +98,7 @@ function handleSwipe(artist) {
 }
 
 function setImgPortfolio(artist) {
+  console.log(artist)
   const carrouselImgPortfolioTitle = document.querySelector('.carrousel-title').children[0];
   const carrouselImgPortfolio = document.querySelector('.carrousel-img-container').children[0];
   const previous = document.querySelector('.displayedImg');
