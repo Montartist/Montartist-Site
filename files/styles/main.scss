@@ -18,6 +18,7 @@ body {
 }
 a {
     color: #ffffff;
+    
 }
 main {
     display: flex;
@@ -28,13 +29,13 @@ main {
 }
 
 #headerhome {
-    @media (max-width: 1200px) {
+    @media (max-width: 1000px) {
         background-image: url(../assets/images/utils/le_mont_artiste.jpg);
         background-size: cover;
         background-position: top center;
         height: 50vh;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 1000px) {
         background-image: url(../assets/images/utils/homePageImg.jpg);
         background-size: cover;
         background-position: top center;
@@ -129,7 +130,7 @@ main {
     }
 
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1000px) {
         #hHome {
             font-size: 3rem;
             padding-left: 3rem;
@@ -199,11 +200,11 @@ main {
         align-items: center;
         .title-container {
             display: flex;
-            @media (max-width: 1200px) {
+            @media (max-width: 1000px) {
                 justify-content: center;
                 align-items: center;
             }
-            @media (min-width: 1200px) {
+            @media (min-width: 1000px) {
                 margin-top: 3rem;
             }
             justify-content: center;
@@ -220,11 +221,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (max-width: 1200px) { 
+    @media (max-width: 1000px) { 
         margin: 4em 1em;
         font-size: 3rem;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 1000px) {
         margin: 6em 10em 2em;
     }
     h2 {
@@ -255,7 +256,7 @@ main {
         list-style-type: none;
         justify-content: space-around;
         padding: 0;
-        @media (max-width: 1200px) { 
+        @media (max-width: 1000px) { 
             font-size: 1.5rem;
         }
         @media (min-width: 1200px) {
@@ -303,7 +304,7 @@ main {
         }  
         .carrousel-img-container {
             height: 100%;
-            @media (max-width: 1200px) { 
+            @media (max-width: 1000px) { 
                 width: 80%;
             }
             @media (min-width: 1200px) {
@@ -420,7 +421,7 @@ main {
 }
 
 .portfolio-desc {
-    @media (max-width: 1200px) {
+    @media (max-width: 1000px) {
         display: block;
         margin: 5rem 1rem 0 1rem;
         .portfolio-desc-autoportrait {
@@ -564,7 +565,16 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-size: 1.5rem;
+        @media (max-width: 1000px) {
+            font-size: 1.5rem;
+        }
+        @media (min-width: 1000px) {
+            font-size: 1rem;
+        }
+        a {
+            color: white;
+        }
+    
         p {
             margin: 0.2em;
         }
