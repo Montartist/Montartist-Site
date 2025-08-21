@@ -2,9 +2,6 @@
 * {
   outline: none;
   -webkit-tap-highlight-color: transparent;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 
 body {
@@ -221,13 +218,13 @@ main {
 }
 @media (max-width: 1000px) {
   #aboutUs {
-    margin: 4em 1em;
+    margin: 4em 1em 0;
     font-size: 3rem;
   }
 }
 @media (min-width: 1000px) {
   #aboutUs {
-    margin: 6em 10em 2em;
+    margin: 6em 10em 0;
   }
 }
 #aboutUs h2 {
@@ -423,6 +420,7 @@ main {
   display: flex;
   justify-content: flex-end;
   margin-top: 7rem;
+  margin-bottom: 2rem;
 }
 @media (max-width: 1000px) {
   .portfolio-desc {
