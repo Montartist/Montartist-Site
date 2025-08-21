@@ -1,10 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap");
+* {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 body {
   font-family: Cambria, Arial;
   margin: 0;
   background: #455459;
   color: #ffffff;
   font-size: 10px;
+  touch-action: manipulation;
 }
 
 a {
@@ -24,7 +33,7 @@ main {
     background-image: url(../assets/images/utils/le_mont_artiste.jpg);
     background-size: cover;
     background-position: top center;
-    height: 70vh;
+    height: 50vh;
   }
 }
 @media (min-width: 1200px) {
@@ -32,7 +41,7 @@ main {
     background-image: url(../assets/images/utils/homePageImg.jpg);
     background-size: cover;
     background-position: top center;
-    height: 80vh;
+    height: 60vh;
   }
   #headerhome a {
     color: black;
@@ -212,7 +221,8 @@ main {
 }
 @media (max-width: 1200px) {
   #aboutUs {
-    margin: 4em 5em 1em;
+    margin: 4em 1em;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
@@ -248,6 +258,11 @@ main {
   list-style-type: none;
   justify-content: space-around;
   padding: 0;
+}
+@media (max-width: 1200px) {
+  .carrousel .carInfo {
+    font-size: 1.5rem;
+  }
 }
 .carrousel .carrousel-viewer {
   height: 70vh;
@@ -369,14 +384,15 @@ main {
 
 .portfolio-list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin-top: 1rem;
-  width: 100%;
-  height: 10vh;
-  justify-content: center;
 }
 .portfolio-list button {
-  flex: 1;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   background-color: #859A9D;
   border: 2px solid #859A9D;
   padding: 0.6em 1.5em;
@@ -385,6 +401,12 @@ main {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1000px) {
+  .portfolio-list button {
+    width: 50vw;
+    font-size: 3rem;
+  }
 }
 .portfolio-list button:hover {
   background-color: #D6D5D3;
@@ -405,6 +427,7 @@ main {
 @media (max-width: 1200px) {
   .portfolio-desc {
     display: block;
+    margin: 5rem 1rem 0 1rem;
   }
   .portfolio-desc .portfolio-desc-autoportrait {
     float: left;
@@ -417,6 +440,7 @@ main {
   }
   .portfolio-desc .portfolio-desc-text {
     margin-left: 2rem;
+    font-size: 3rem;
   }
 }
 .portfolio-desc .portfolio-desc-autoportrait {
@@ -451,22 +475,23 @@ main {
   width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 .concours-settings {
   display: flex;
+  flex-direction: column;
   width: 100%;
   margin-top: 1rem;
 }
-@media (min-width: 1200px) {
+@media (max-width: 1000px) {
   .concours-settings {
-    height: 30vh;
+    flex-direction: column;
   }
 }
-@media (max-width: 1200px) {
+@media (min-width: 1000px) {
   .concours-settings {
-    height: 20vh;
+    flex-direction: row;
   }
 }
 .concours-settings .concours-settings-divider {
@@ -474,9 +499,18 @@ main {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 .concours-settings .concours-settings-divider .custom-checkbox {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   flex: 1;
+  padding: 2rem;
+  color: black;
+  font-size: 4rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -486,8 +520,22 @@ main {
   width: 100%;
   box-sizing: border-box;
 }
+@media (max-width: 1000px) {
+  .concours-settings .concours-settings-divider .custom-checkbox {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1000px) {
+  .concours-settings .concours-settings-divider .custom-checkbox {
+    font-size: 1.5rem;
+  }
+}
 .concours-settings .concours-settings-divider .custom-checkbox input {
   z-index: 3;
+  display: none;
+}
+.concours-settings .concours-settings-divider .custom-checkbox .checkbox-label {
+  z-index: 1;
 }
 .concours-settings .concours-settings-divider .custom-checkbox .checkbox-overlay {
   position: absolute;
@@ -500,9 +548,6 @@ main {
 .concours-settings .concours-settings-divider .custom-checkbox input:checked ~ .checkbox-overlay {
   background-color: #D6D5D3;
   z-index: 0;
-}
-.concours-settings .concours-settings-divider .custom-checkbox .checkbox-label {
-  z-index: 1;
 }
 .concours-settings #divider1 {
   flex: 0 0 50%;
@@ -523,6 +568,7 @@ footer #footerText {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 1.5rem;
 }
 footer #footerText p {
   margin: 0.2em;

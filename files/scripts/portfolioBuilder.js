@@ -1,6 +1,9 @@
 import * as dataLoad from './dataLoad.js'
 
 let artistsArray = []
+let startX = 0;
+let endX = 0;
+let imgId = 0;
 
 async function build() {
   let artists = await dataLoad.requestJSON(`/files/data/portfolio.json`);
@@ -36,7 +39,6 @@ function loadArtist(artist) {
   portfolioName.textContent = artist["name"];
 
   // CARROUSEL
-  let imgId = 0
   carrouselCollection.innerHTML = "";
   for (let i = 0; i<artist["oeuvres"].length; i++) {
 		let div = document.createElement('div');
@@ -48,30 +50,54 @@ function loadArtist(artist) {
 		div.appendChild(img);
 
     div.addEventListener('click', () => {
-      setImgPortfolio(i, artist);
+      imgId = i;
+      setImgPortfolio(artist);
     });
 	};
 
   carrouselButtonsLeft.addEventListener('click', () => {
   imgId == 0 ? imgId = artist["oeuvres"].length-1 : imgId -= 1;
-    setImgPortfolio(imgId, artist);
+    setImgPortfolio(artist);
   });
 
   carrouselButtonsRight.addEventListener('click', () => {
     imgId == artist["oeuvres"].length-1 ? imgId = 0 : imgId += 1;
-    setImgPortfolio(imgId, artist);
+    setImgPortfolio(artist);
   });
 
-  setImgPortfolio(0, artist)
+  setImgPortfolio(artist)
 
   // INFOS
   portfolioDescText.innerHTML = artist["intention"];
   portfolioDescTextContact.innerHTML = `Me contacter : ${artist["mail"]}`;
   portfolioDescAutoportrait.setAttribute('src', `/files/assets/images/oeuvres/portfolios/${artist["folderName"]}/${artist["autoportrait"]}`);
 
+  const carrouselImgContainer = document.querySelector('.carrousel-img-container');
+
+	carrouselImgContainer.addEventListener('touchstart', (e) => {
+		startX = e.touches[0].clientX;
+	});
+
+	carrouselImgContainer.addEventListener('touchend', (e) => {
+		endX = e.changedTouches[0].clientX;
+		handleSwipe(artist);
+	});
 };
 
-function setImgPortfolio(imgId, artist) {
+function handleSwipe(artist) {
+  const diff = endX - startX;
+  if (Math.abs(diff) > 150) {
+    if (diff > 0) {
+      imgId == 0 ? imgId = artist["oeuvres"].length-1 : imgId -= 1;
+      setImgPortfolio(artist);
+    } else {
+      imgId == artist["oeuvres"].length-1 ? imgId = 0 : imgId += 1;
+      setImgPortfolio(artist);
+    }
+  }
+}
+
+function setImgPortfolio(artist) {
   const carrouselImgPortfolioTitle = document.querySelector('.carrousel-title').children[0];
   const carrouselImgPortfolio = document.querySelector('.carrousel-img-container').children[0];
   const previous = document.querySelector('.displayedImg');

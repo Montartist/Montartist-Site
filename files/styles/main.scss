@@ -3,13 +3,18 @@ $secondary: #859A9D;
 $accent: #D6D5D3;
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
 
-
+* {
+    outline: none; 
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
 body {
     font-family: Cambria, Arial;
     margin: 0;
     background: $primary;
     color: #ffffff;
     font-size: 10px;
+    touch-action: manipulation;
 }
 a {
     color: #ffffff;
@@ -27,13 +32,13 @@ main {
         background-image: url(../assets/images/utils/le_mont_artiste.jpg);
         background-size: cover;
         background-position: top center;
-        height: 70vh;
+        height: 50vh;
     }
     @media (min-width: 1200px) {
         background-image: url(../assets/images/utils/homePageImg.jpg);
         background-size: cover;
         background-position: top center;
-        height: 80vh;
+        height: 60vh;
         a {
             color: black;
         }
@@ -216,7 +221,8 @@ main {
     flex-direction: column;
     align-items: center;
     @media (max-width: 1200px) { 
-        margin: 4em 5em 1em;
+        margin: 4em 1em;
+        font-size: 3rem;
     }
     @media (min-width: 1200px) {
         margin: 6em 10em 2em;
@@ -249,6 +255,11 @@ main {
         list-style-type: none;
         justify-content: space-around;
         padding: 0;
+        @media (max-width: 1200px) { 
+            font-size: 1.5rem;
+        }
+        @media (min-width: 1200px) {
+        }
     }
     .carrousel-viewer {
         height: 70vh;
@@ -371,14 +382,13 @@ main {
 
 .portfolio-list {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-top: 1rem;
-    width: 100%;
-    height: 10vh;
-    justify-content: center;
 
     button {
-        flex: 1;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
         background-color: $secondary;
         border: 2px solid $secondary;
         padding: 0.6em 1.5em;
@@ -387,6 +397,13 @@ main {
         cursor: pointer;
         transition: all 0.3s ease;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+        @media (max-width: 1000px) { 
+            width: 50vw;
+            font-size: 3rem;
+        }
+        @media (min-width: 1000px) {
+        }
         
         &:hover {
             background-color: $accent;
@@ -405,6 +422,7 @@ main {
 .portfolio-desc {
     @media (max-width: 1200px) {
         display: block;
+        margin: 5rem 1rem 0 1rem;
         .portfolio-desc-autoportrait {
             float: left;
             width: 20vw;
@@ -416,6 +434,7 @@ main {
         }
         .portfolio-desc-text {
             margin-left: 2rem;
+            font-size: 3rem;
         }
     }
     display: flex;
@@ -448,20 +467,21 @@ main {
         .portfolio-desc-text-contact {
             width: fit-content;
             margin-left: auto;
-            margin-top: 2rem;
+            margin-top: 5rem;
         }
     }
 }
 
 .concours-settings {
     display: flex;
+    @media (max-width: 1000px) { 
+        flex-direction: column;
+    }
+    @media (min-width: 1000px) {
+        flex-direction: row;
+    }
+    flex-direction: column;
     width: 100%;
-    @media (min-width: 1200px) {
-        height: 30vh;
-    }
-    @media (max-width: 1200px) {
-        height: 20vh;
-    }
     margin-top: 1rem;
     
     .concours-settings-divider {
@@ -469,10 +489,24 @@ main {
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
+        margin-bottom: 1rem;
 
         .custom-checkbox {
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
             flex: 1;
-            position: relative; // permet à l'overlay d'être positionné par rapport à ce label
+            padding: 2rem;
+            color: black;
+            @media (max-width: 1000px) { 
+                font-size: 3rem;
+            }
+            @media (min-width: 1000px) {
+                font-size: 1.5rem;
+            }
+            
+            font-size: 4rem;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -483,15 +517,20 @@ main {
 
             input {
                 z-index: 3;
+                display: none;
+            }
+            
+            .checkbox-label {
+                z-index: 1;
             }
 
             .checkbox-overlay {
-                position: absolute; // couvre tout le label
+                position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: transparent; // overlay invisible
+                background: transparent;
             }
 
             input:checked ~ .checkbox-overlay {
@@ -499,9 +538,6 @@ main {
                 z-index: 0;
             }
 
-            .checkbox-label {
-                z-index: 1;
-            }
         }
         
     }
@@ -528,6 +564,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-size: 1.5rem;
         p {
             margin: 0.2em;
         }
