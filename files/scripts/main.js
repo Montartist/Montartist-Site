@@ -33,7 +33,7 @@ sidebar.addEventListener('touchend', (e) => {
     endX = e.changedTouches[0].clientX;
     if (inputSidebar.checked) {
         const diff = endX - startX;
-        if (Math.abs(diff) > 250) {
+        if (Math.abs(diff) > 150) {
             if (diff > 0) {
                 inputSidebar.click();
             };

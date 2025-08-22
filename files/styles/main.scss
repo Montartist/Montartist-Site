@@ -75,7 +75,6 @@ main {
             width: 100%;
             display: flex;
             #hHome {
-                margin-right: auto;
                 display: flex;
                 align-items: center;
                 padding-left: 2rem;
@@ -96,10 +95,10 @@ main {
             filter: brightness(0) invert(1);
             display: none;
             height: 100%;
+            margin-left: auto;
             cursor: pointer;
             img {
                 height: 100%;
-                width: 100%;
                 object-fit: contain;
             }
             display: none;
@@ -117,7 +116,6 @@ main {
             cursor: pointer;
             img {
                 height: 100%;
-                width: 100%;
                 object-fit: contain;
             }
         }
@@ -387,7 +385,8 @@ main {
 
     button {
         outline: none;
-        -webkit-tap-highlight-color: transparent;
+        color: black;
+        appearance: none;
         user-select: none;
         background-color: $secondary;
         border: 2px solid $secondary;
