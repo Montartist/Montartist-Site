@@ -28,13 +28,11 @@ main {
 }
 
 #headerhome {
-    @media (max-width: 1200px) {
-        background-image: url(../assets/images/utils/le_mont_artiste.jpg);
-        background-size: cover;
-        background-position: top center;
-        height: 50vh;
-    }
-    @media (min-width: 1200px) {
+    background-image: url(../assets/images/utils/le_mont_artiste.jpg);
+    background-size: cover;
+    background-position: top center;
+    height: 50vh;
+    @media (min-width: 900px) {
         background-image: url(../assets/images/utils/homePageImg.jpg);
         background-size: cover;
         background-position: top center;
@@ -77,7 +75,7 @@ main {
             #hHome {
                 display: flex;
                 align-items: center;
-                padding-left: 2rem;
+                padding-left: 1.5rem;
             }
         }
     }
@@ -127,68 +125,66 @@ main {
     }
 
 
-    @media (max-width: 1200px) {
-        #hHome {
-            font-size: 3rem;
-            padding-left: 3rem;
-        }
-        .links-container {
-            flex-direction: column;
-            align-items: start;
-            display: flex;
-            position: fixed;
-            top: 0;
-            right: -100%;
-            z-index: 10;
-            width: 85vw;
-            background-color: $primary;
-            box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
-            transition: 0.25s ease-out;
-            .links-container-link {
-                display: block;
-                font-size: 3rem;
-                padding-left: 5rem;
-                height: auto;
-                
-                color: white;
-                padding-top: 2rem;
-                padding-bottom: 2rem;
-                
-            }
-            .links-container-link:hover {
-                background-color: $secondary;
-                cursor: pointer;
-            }  
-        }
-        .hlinks {
-            align-items: center;
-        }
-        .open-sidebar-button {
-            display: block;
-            height: 3rem;
-            margin-right: 3rem;
-        }
-        .links-container .close-sidebar-button {
-            display: block;
-            filter: brightness(0) invert(1);
-            height: 5rem;
-            margin-right: 3rem;
-            margin-top: 3rem;
-            margin-bottom: 2rem;
-            align-self: flex-end
-        }
-        #sidebar-active:checked ~ .links-container{
-            right: 0;
-        }
-        #sidebar-active:checked ~ #overlay{
-            height: 100%;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9;
-        } 
+    #hHome {
+        font-size: 1.5rem;
     }
+    .links-container {
+        flex-direction: column;
+        align-items: start;
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 85vw;
+        background-color: $primary;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.25s ease-out;
+        .links-container-link {
+            display: block;
+            font-size: 3rem;
+            padding-left: 5rem;
+            height: auto;
+            
+            color: white;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            
+        }
+        .links-container-link:hover {
+            background-color: $secondary;
+            cursor: pointer;
+        }  
+    }
+    .hlinks {
+        align-items: center;
+    }
+    .open-sidebar-button {
+        display: block;
+        height: 2rem;
+        margin-right: 1rem;
+    }
+    .links-container .close-sidebar-button {
+        display: block;
+        filter: brightness(0) invert(1);
+        height: 5rem;
+        margin-right: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        align-self: flex-end
+    }
+    #sidebar-active:checked ~ .links-container{
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    } 
+    
     .htitle {
         height: 100%;
         width: 100%;
@@ -197,16 +193,12 @@ main {
         align-items: center;
         .title-container {
             display: flex;
-            @media (max-width: 1200px) {
-                justify-content: center;
-                align-items: center;
-            }
-            @media (min-width: 1200px) {
+            justify-content: center;
+            align-items: center;
+            @media (min-width: 900px) {
                 margin-top: 3rem;
             }
-            justify-content: center;
             h1 {
-                font-size: 6rem;
                 color: white;
                 text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.8);
             }
@@ -218,11 +210,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (max-width: 1200px) { 
-        margin: 4em 1em;
-        font-size: 3rem;
-    }
-    @media (min-width: 1200px) {
+    margin: 4rem 1rem;
+    font-size: 3rem;
+    @media (min-width: 900px) {
         margin: 6em 10em 2em;
     }
     h2 {
@@ -253,11 +243,7 @@ main {
         list-style-type: none;
         justify-content: space-around;
         padding: 0;
-        @media (max-width: 1200px) { 
-            font-size: 1.5rem;
-        }
-        @media (min-width: 1200px) {
-        }
+        font-size: 1.5rem;
     }
     .carrousel-viewer {
         height: 70vh;
@@ -301,10 +287,8 @@ main {
         }  
         .carrousel-img-container {
             height: 100%;
-            @media (max-width: 1200px) { 
-                width: 80%;
-            }
-            @media (min-width: 1200px) {
+            width: 80%;
+            @media (min-width: 900px) {
                 width: 70%;
             }
         }
@@ -396,13 +380,8 @@ main {
         cursor: pointer;
         transition: all 0.3s ease;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-
-        @media (max-width: 1000px) { 
-            width: 50vw;
-            font-size: 3rem;
-        }
-        @media (min-width: 1000px) {
-        }
+        width: 50vw;
+        font-size: 3rem;
         
         &:hover {
             background-color: $accent;
@@ -419,41 +398,37 @@ main {
 }
 
 .portfolio-desc {
-    @media (max-width: 1200px) {
-        display: block;
-        margin: 5rem 1rem 0 1rem;
-        .portfolio-desc-autoportrait {
-            float: left;
-            width: 20vw;
-            max-height: none;
-            height: auto;
-            margin-right: 2rem;
-            margin-left: 2rem;
-            margin-top: 0.1em;
-        }
-        .portfolio-desc-text {
-            margin-left: 2rem;
-            font-size: 3rem;
-        }
+    display: block;
+    margin: 5rem 1rem 0 1rem;
+    .portfolio-desc-autoportrait {
+        float: left;
+        width: 20vw;
+        max-height: none;
+        height: auto;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        margin-top: 0.1em;
+    }
+    .portfolio-desc-text {
+        margin-left: 2rem;
+        font-size: 3rem;
     }
     display: flex;
     justify-content: flex-end;
     margin-top: 7rem;
     .portfolio-desc-autoportrait {
+        img {
+            height: 100%;
+            max-width: 100%;
+        }
         flex: 0 0 30%;
-        @media (min-width: 1200px) {
+        @media (min-width: 900px) {
             max-width: 20vw;
             margin: 0 2rem 0 2rem;
             img {
                 height: auto;
                 width: 100%;
                 object-fit: contain;
-            }
-        }
-        @media (max-width: 1200px) {
-            img {
-                height: 100%;
-                max-width: 100%;
             }
         }
     }
@@ -473,10 +448,8 @@ main {
 
 .concours-settings {
     display: flex;
-    @media (max-width: 1000px) { 
-        flex-direction: column;
-    }
-    @media (min-width: 1000px) {
+    flex-direction: column;
+    @media (min-width: 900px) {
         flex-direction: row;
     }
     flex-direction: column;
@@ -497,10 +470,8 @@ main {
             flex: 1;
             padding: 2rem;
             color: black;
-            @media (max-width: 1000px) { 
-                font-size: 3rem;
-            }
-            @media (min-width: 1000px) {
+            font-size: 3rem;
+            @media (min-width: 900px) {
                 font-size: 1.5rem;
             }
             
