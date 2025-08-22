@@ -80,7 +80,6 @@ main {
   display: flex;
 }
 .header .navbar .hlinks #hHome {
-  margin-right: auto;
   display: flex;
   align-items: center;
   padding-left: 2rem;
@@ -97,12 +96,12 @@ main {
   filter: brightness(0) invert(1);
   display: none;
   height: 100%;
+  margin-left: auto;
   cursor: pointer;
   display: none;
 }
 .header .open-sidebar-button img {
   height: 100%;
-  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -119,7 +118,6 @@ main {
 }
 .header .links-container .close-sidebar-button img {
   height: 100%;
-  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -389,7 +387,10 @@ main {
 }
 .portfolio-list button {
   outline: none;
-  -webkit-tap-highlight-color: transparent;
+  color: black;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
