@@ -101,6 +101,7 @@ function setImgPortfolio(artist) {
   const carrouselImgPortfolioTitle = document.querySelector('.carrousel-title').children[0];
   const carrouselImgPortfolio = document.querySelector('.carrousel-img-container').children[0];
   const previous = document.querySelector('.displayedImg');
+  imgId = 0;
 
   carrouselImgPortfolioTitle.innerHTML = artist["oeuvres"][imgId][0];
   carrouselImgPortfolio.setAttribute('src', `/files/assets/images/oeuvres/portfolios/${artist["folderName"]}/oeuvres/${artist["oeuvres"][imgId][1]}`);
