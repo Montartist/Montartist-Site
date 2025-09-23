@@ -48,14 +48,12 @@ async function build() {
   // Store current artist in a global variable
   currentArtist = artistsArray[0];
   loadArtist(currentArtist);
-
-  loadArtist(artistsArray[0]);
 };
 
 function loadArtist(artist) {
   currentArtist = artist;
   imgId = 0;
-  
+
   const portfolioName = document.querySelector('#portfolio-name');
   const portfolioDescAutoportrait = document.querySelector('.portfolio-desc-autoportrait').children[0];
   const portfolioDescText = document.querySelector('.portfolio-desc-text').children[0];
@@ -96,15 +94,15 @@ function loadArtist(artist) {
   const carrouselImgContainer = document.querySelector('.carrousel-img-container');
 };
 
-function handleSwipe(artist) {
+function handleSwipe() {
   const diff = endX - startX;
   if (Math.abs(diff) > 150) {
     if (diff > 0) {
-      imgId == 0 ? imgId = artist["oeuvres"].length-1 : imgId -= 1;
-      setImgPortfolio(artist);
+      imgId == 0 ? imgId = currentArtist["oeuvres"].length-1 : imgId -= 1;
+      setImgPortfolio(currentArtist);
     } else {
-      imgId == artist["oeuvres"].length-1 ? imgId = 0 : imgId += 1;
-      setImgPortfolio(artist);
+      imgId == currentArtist["oeuvres"].length-1 ? imgId = 0 : imgId += 1;
+      setImgPortfolio(currentArtist);
     }
   }
 }
